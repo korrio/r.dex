@@ -20,7 +20,7 @@ export const UST = new Token(
 )
 export const ETH = new Token(
   ChainId.MAINNET,
-  '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+  '0x12a5A2f27bc1eA474518f41A829B60b945585c97',
   18,
   'ETH',
   'Binance-Peg Ethereum Token'
@@ -62,8 +62,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82', 18, 'VON', 'VONDER Token'),
-      new Token(ChainId.MAINNET, '0xae13d989dac2f0debff460ac112a837c89baa7cd', 18, 'KKUB', 'Wrapped KUB'),
+      new Token(ChainId.MAINNET, '0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7', 18, 'VON', 'VONDER Token'),
+      new Token(ChainId.MAINNET, '0x12a5A2f27bc1eA474518f41A829B60b945585c97', 18, 'KKUB', 'Wrapped KUB'),
     ],
     [BUSD, USDT],
     [DAI, USDT],
