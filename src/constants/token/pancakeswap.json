@@ -38,6 +38,22 @@
       "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
     },
     {
+      "name": "KKUB Token (Testnet)",
+      "symbol": "KKUB",
+      "address": "0x32152B54A9EAfC5feD60F47053D621D74c38b1A6",
+      "chainId": 25925,
+      "decimals": 18,
+      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
+    },
+    {
+      "name": "Vonder Token",
+      "symbol": "VON",
+      "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
+      "chainId": 25925,
+      "decimals": 18,
+      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+    },
+    {
       "name": "WBNB Token",
       "symbol": "WBNB",
       "address": "0xae13d989dac2f0debff460ac112a837c89baa7cd",

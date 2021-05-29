@@ -66,7 +66,7 @@ export const WETH = {
   ),
   [ChainId.TESTNET]: new Token(
     ChainId.TESTNET,
-    '0xaE8E19eFB41e7b96815649A6a60785e1fbA84C1e',
+    '0x32152B54A9EAfC5feD60F47053D621D74c38b1A6',
     18,
     'KKUB',
     'Wrapped KUB'
