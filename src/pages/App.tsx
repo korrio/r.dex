@@ -77,41 +77,41 @@ export default function App() {
     })[0]
   }
 
-  useEffect(() => {
-    const storedLangCode = localStorage.getItem('pancakeSwapLanguage')
-    if (storedLangCode) {
-      const storedLang = getStoredLang(storedLangCode)
-      setSelectedLanguage(storedLang)
-    } else {
-      setSelectedLanguage(EN)
-    }
-  }, [])
+  // useEffect(() => {
+  //   const storedLangCode = localStorage.getItem('pancakeSwapLanguage')
+  //   if (storedLangCode) {
+  //     const storedLang = getStoredLang(storedLangCode)
+  //     setSelectedLanguage(storedLang)
+  //   } else {
+  //     setSelectedLanguage(EN)
+  //   }
+  // }, [])
 
-  const fetchTranslationsForSelectedLanguage = async () => {
-    stringTranslationsApi
-      .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
-      .then((translationApiResponse) => {
-        if (translationApiResponse.data.length < 1) {
-          setTranslations(['error'])
-        } else {
-          setTranslations(translationApiResponse.data)
-        }
-      })
-      .then(() => setTranslatedLanguage(selectedLanguage))
-      .catch((error) => {
-        setTranslations(['error'])
-        console.error(error)
-      })
-  }
+  // const fetchTranslationsForSelectedLanguage = async () => {
+  //   stringTranslationsApi
+  //     .listLanguageTranslations(projectId, selectedLanguage.code, undefined, fileId, 200)
+  //     .then((translationApiResponse) => {
+  //       if (translationApiResponse.data.length < 1) {
+  //         setTranslations(['error'])
+  //       } else {
+  //         setTranslations(translationApiResponse.data)
+  //       }
+  //     })
+  //     .then(() => setTranslatedLanguage(selectedLanguage))
+  //     .catch((error) => {
+  //       setTranslations(['error'])
+  //       console.error(error)
+  //     })
+  // }
 
-  useEffect(() => {
-    if (selectedLanguage) {
-      fetchTranslationsForSelectedLanguage()
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedLanguage])
+  // useEffect(() => {
+  //   if (selectedLanguage) {
+  //     fetchTranslationsForSelectedLanguage()
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [selectedLanguage])
 
-  useGetDocumentTitlePrice()
+  // useGetDocumentTitlePrice()
 
   return (
     <Suspense fallback={null}>

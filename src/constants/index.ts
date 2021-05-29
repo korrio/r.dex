@@ -22,8 +22,8 @@ export const ETH = new Token(
   ChainId.MAINNET,
   '0x12a5A2f27bc1eA474518f41A829B60b945585c97',
   18,
-  'ETH',
-  'Binance-Peg Ethereum Token'
+  'KUB',
+  'Official Wrapped KUB Token'
 )
 
 const WETH_ONLY: ChainTokenList = {
