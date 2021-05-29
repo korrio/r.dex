@@ -20,7 +20,8 @@ export function isAddress(value: any): string | false {
 const BSCSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   96: '',
   // 56: '',
-  97: 'testnet.'
+  // 97: 'testnet.',
+  25925: 'testnet.'
 }
 
 export function getBscScanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
