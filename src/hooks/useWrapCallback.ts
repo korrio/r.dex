@@ -31,8 +31,19 @@ export default function useWrapCallback(
   const inputAmount = useMemo(() => tryParseAmount(typedValue, inputCurrency), [inputCurrency, typedValue])
   const addTransaction = useTransactionAdder()
 
+
+
   return useMemo(() => {
     if (!wethContract || !chainId || !inputCurrency || !outputCurrency) return NOT_APPLICABLE
+
+      console.log("WETH[chainId]");
+  console.log(WETH[chainId]);
+
+  console.log("inputCurrency");
+  console.log(inputCurrency);
+
+  console.log("outputCurrency");
+  console.log(outputCurrency);
 
     const sufficientBalance = inputAmount && balance && !balance.lessThan(inputAmount)
 
