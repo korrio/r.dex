@@ -1,6 +1,7 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '../sdk'
 
-export const ROUTER_ADDRESS = '0xa93F69529826918A38127a76c366cA1445Fc1158'
+// export const ROUTER_ADDRESS = '0xa93F69529826918A38127a76c366cA1445Fc1158' // BKC Mainnet
+export const ROUTER_ADDRESS = '0x506cb2F34CB43c70A2674B2a9D03cC3f374bEf5b' // BKC Testnet
 
 // a list of tokens by chain
 type ChainTokenList = {

@@ -1,89 +1,106 @@
 {
-  "name": "PancakeSwap Default List",
-  "timestamp": "2021-03-17T09:56:23Z",
-  "version": {
-    "major": 2,
-    "minor": 7,
-    "patch": 0
-  },
-  "tags": {},
-  "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
-  "keywords": [
-    "pancake",
-    "default"
-  ],
-  "tokens": [
+    "name": "PancakeSwap Default List",
+    "timestamp": "2021-03-17T09:56:23Z",
+    "version":
     {
-      "name": "KKUB Token",
-      "symbol": "KKUB",
-      "address": "0x12a5A2f27bc1eA474518f41A829B60b945585c97",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
+        "major": 2,
+        "minor": 7,
+        "patch": 0
     },
+    "tags":
+    {},
+    "logoURI": "https://exchange.pancakeswap.finance/images/pancakeswap.png",
+    "keywords": [
+        "pancake",
+        "default"
+    ],
+    "tokens": [
     {
-      "name": "Vonder Token",
-      "symbol": "VON",
-      "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
-    },
-        {
-      "name": "Wrapped USDT",
-      "symbol": "KUSDT",
-      "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
-    },
-        {
-      "name": "Wrapped USDC",
-      "symbol": "KUSDC",
-      "address": "0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
-    },
-        {
-      "name": "Wrapped DAI",
-      "symbol": "KDAI",
-      "address": "0xc6677E014D7e2F45fB44E8036C014B916C0492a1",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
-    },
-        {
-      "name": "Wrapped BTC",
-      "symbol": "KBTC",
-      "address": "0x0330b553823703E673787747D1930a12D7a14c94",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c.png"
-    },
-        {
-      "name": "Wrapped ETH",
-      "symbol": "KETH",
-      "address": "0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2",
-      "chainId": 96,
-      "decimals": 18,
-      "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png" 
+        "name": "KKUB Token",
+        "symbol": "KKUB",
+        "address": "0x12a5A2f27bc1eA474518f41A829B60b945585c97",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
     },
     {
-      "name": "KKUB Token (Testnet)",
-      "symbol": "KKUB",
-      "address": "0x32152B54A9EAfC5feD60F47053D621D74c38b1A6",
-      "chainId": 25925,
-      "decimals": 18,
-      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
+        "name": "WKUB Token",
+        "symbol": "WKUB",
+        "address": "0xba3013a9F768a604C6752aB948c05BDAf023CaeF",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
     },
     {
-      "name": "Vonder Token (Testnet)",
-      "symbol": "VON",
-      "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
-      "chainId": 25925,
-      "decimals": 18,
-      "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
-    }
-  ]
+        "name": "Vonder Token",
+        "symbol": "VON",
+        "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+    },
+        {
+        "name": "Vonder Token Test",
+        "symbol": "VON-T",
+        "address": "0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+    },
+    {
+        "name": "Wrapped USDT",
+        "symbol": "KUSDT",
+        "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
+    },
+    {
+        "name": "Wrapped USDC",
+        "symbol": "KUSDC",
+        "address": "0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
+    },
+    {
+        "name": "Wrapped DAI",
+        "symbol": "KDAI",
+        "address": "0xc6677E014D7e2F45fB44E8036C014B916C0492a1",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+    },
+    {
+        "name": "Wrapped BTC",
+        "symbol": "KBTC",
+        "address": "0x0330b553823703E673787747D1930a12D7a14c94",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c.png"
+    },
+    {
+        "name": "Wrapped ETH",
+        "symbol": "KETH",
+        "address": "0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
+    },
+    {
+        "name": "KKUB Token (Testnet)",
+        "symbol": "KKUB",
+        "address": "0x32152B54A9EAfC5feD60F47053D621D74c38b1A6",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
+    },
+    {
+        "name": "Vonder Token (Testnet)",
+        "symbol": "VON",
+        "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+    }]
 }
