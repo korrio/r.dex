@@ -16,8 +16,8 @@
     ],
     "tokens": [
     {
-        "name": "KKUB Token",
-        "symbol": "KKUB",
+        "name": "WKUB Token",
+        "symbol": "WKUB",
         "address": "0x12a5A2f27bc1eA474518f41A829B60b945585c97",
         "chainId": 96,
         "decimals": 18,
@@ -144,9 +144,9 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
     },
     {
-        "name": "KKUB Token (Testnet)",
-        "symbol": "KKUB",
-        "address": "0x32152B54A9EAfC5feD60F47053D621D74c38b1A6",
+        "name": "WKUB Token (Testnet)",
+        "symbol": "WKUB",
+        "address": "0xba3013a9f768a604c6752ab948c05bdaf023caef",
         "chainId": 25925,
         "decimals": 18,
         "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
