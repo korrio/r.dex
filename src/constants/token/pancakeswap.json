@@ -24,20 +24,12 @@
         "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
     },
     {
-        "name": "WKUB Token",
-        "symbol": "WKUB",
-        "address": "0xba3013a9F768a604C6752aB948c05BDAf023CaeF",
-        "chainId": 25925,
-        "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
-    },
-    {
         "name": "Vonder Token",
         "symbol": "VON",
         "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
         "chainId": 96,
         "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
     },
         {
         "name": "Vonder Token Test",
@@ -45,10 +37,74 @@
         "address": "0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe",
         "chainId": 25925,
         "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
     },
     {
-        "name": "Wrapped USDT",
+        "name": "KJFIN Token",
+        "symbol": "KJFIN",
+        "address": "0xA17217aee96e9b7132D8f5E21195C27dc0273Fe5",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/JFIN.png"
+    },
+    {
+        "name": "KSIX Token",
+        "symbol": "KSIX",
+        "address": "0x3D49f3C7C7FB3041743cFDEc46DC941b1f1815CE",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/SIX.png"
+    },
+    {
+        "name": "KBTC Token",
+        "symbol": "KBTC",
+        "address": "0xD2E84e84F8bCd48120FBbA4e753D3635D6a10875",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/BTC.png"
+    },
+    {
+        "name": "KBNB Token",
+        "symbol": "KBNB",
+        "address": "0x36A574C4990D7591e9Da33b33b69ca6ff105c98B",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/BNB.png"
+    },
+    {
+        "name": "KUSDC Token",
+        "symbol": "KUSDC",
+        "address": "0x7961B859859A1d4100f32eA70bb8762dDa5F3F1b",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/USDC.png"
+    },
+    {
+        "name": "KUSDT Token",
+        "symbol": "KUSDT",
+        "address": "0xb4617A501428c74a5BDd082686D23E9A73C0D661",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/USDT.png"
+    },
+    {
+        "name": "KDAI Token",
+        "symbol": "KDAI",
+        "address": "0x3171874B59d7763626b76F035De2D90E44Ab8930",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/DAI.png"
+    },
+    {
+        "name": "KETH Token",
+        "symbol": "KETH",
+        "address": "0x5eEF8a59eA46be9B71483080b5D9135dBeB903C0",
+        "chainId": 25925,
+        "decimals": 18,
+        "logoURI": "https://bitkub.com/static/images/icons/ETH.png"
+    },
+    {
+        "name": "KUSDT Token",
         "symbol": "KUSDT",
         "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
         "chainId": 96,
@@ -94,13 +150,5 @@
         "chainId": 25925,
         "decimals": 18,
         "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
-    },
-    {
-        "name": "Vonder Token (Testnet)",
-        "symbol": "VON",
-        "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
-        "chainId": 25925,
-        "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/von.png"
     }]
 }

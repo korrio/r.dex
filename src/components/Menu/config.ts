@@ -21,6 +21,11 @@ const config: MenuEntry[] = [
     icon: 'FarmIcon',
     href: 'https://vonder-swap.web.app/farms',
   },
+  {
+    label: 'Pools',
+    icon: 'PoolIcon',
+    href: 'https://vonder-swap.web.app/pools',
+  },
 ]
 
 export default config
