@@ -57,7 +57,7 @@ export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } 
   [ChainId.MAINNET]: [
     [
       new Token(ChainId.MAINNET, '0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7', 18, 'VON', 'VONDER Token'),
-      new Token(ChainId.MAINNET, '0x12a5A2f27bc1eA474518f41A829B60b945585c97', 18, 'KKUB', 'Wrapped KUB'),
+      new Token(ChainId.MAINNET, '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', 18, 'KKUB', 'Wrapped KUB'),
     ],
     [USDC, USDT],
     [DAI, USDT],
