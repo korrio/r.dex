@@ -103,10 +103,15 @@ function CurrencyRow({
   const removeToken = useRemoveUserAddedToken()
   const addToken = useAddUserToken()
 
+  const StyledTextTokenTitle = styled(Text)`
+    font-weight:700;
+  `
+
   const StyledText = styled(Text)`
     font-size:12px;
-
   `
+
+
 
   // only show add or remove buttons if not on selected list
   return (
@@ -119,7 +124,7 @@ function CurrencyRow({
     >
       <CurrencyLogo currency={currency} size="24px" />
       <Column>
-        <Text title={currency.name}>{currency.symbol}</Text>
+        <StyledTextTokenTitle title={currency.name}>{currency.symbol}</StyledTextTokenTitle>
         <StyledText title={currency.name}>{currency.name}</StyledText>
         <FadedSpan>
           {!isOnSelectedList && customAdded && !(currency instanceof WrappedTokenInfo) ? (

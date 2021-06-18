@@ -16,6 +16,13 @@ interface Window {
   BinanceChain?: BinanceChain
 }
 
+interface WindowChain {
+  ethereum?: {
+    isMetaMask?: true
+    request?: (...args: any[]) => void
+  }
+}
+
 declare module 'content-hash' {
   declare function decode(x: string): string
   declare function getCodec(x: string): string

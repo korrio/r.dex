@@ -1,8 +1,9 @@
 import React, { useCallback, useState } from 'react'
+import styled from 'styled-components'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
 import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '../../sdk' // eslint-ignore
-import { Button, CardBody, AddIcon, Text as UIKitText } from '@pancakeswap-libs/uikit'
+import { MetamaskIcon, Button, CardBody, AddIcon, Text as UIKitText } from '@pancakeswap-libs/uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -35,6 +36,8 @@ import { Dots, Wrapper } from '../Pool/styleds'
 import { ConfirmAddModalBottom } from './ConfirmAddModalBottom'
 import { PoolPriceBar } from './PoolPriceBar'
 import { ROUTER_ADDRESS } from '../../constants'
+
+
 
 export default function AddLiquidity({
   match: {
@@ -233,6 +236,50 @@ export default function AddLiquidity({
       </AutoColumn>
     )
   }
+
+// const registerToken = async (
+//         tokenAddress: string,
+//         tokenSymbol: string,
+//         tokenDecimals: number,
+//         tokenImage: string,
+//     ) => {
+//         const tokenAdded = await (window as WindowChain).ethereum.request({
+//             method: 'wallet_watchAsset',
+//             params: {
+//                 type: 'ERC20',
+//                 options: {
+//                     address: tokenAddress,
+//                     symbol: tokenSymbol,
+//                     decimals: tokenDecimals,
+//                     image: tokenImage,
+//                 },
+//             },
+//         })
+
+//         return tokenAdded
+//     }
+
+const registerToken = (a,b,c,d) => {
+  const e = 0;
+  return e;
+}
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+`
+
+const ButtonContainer = styled.div`
+  margin-top: 25px;
+`
+
+const TokenLink = styled.a`
+  font-size: 14px;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
+`
 
   const modalBottom = () => {
     return (
@@ -446,6 +493,7 @@ export default function AddLiquidity({
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWBNB} pair={pair} />
         </AutoColumn>
       ) : null}
+        
     </>
   )
 }
