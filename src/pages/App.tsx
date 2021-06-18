@@ -24,6 +24,11 @@ const AppWrapper = styled.div`
   flex-flow: column;
   align-items: flex-start;
   overflow-x: hidden;
+
+  background-image: url('https://vonder-landing.web.app/assets/bg-token.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: auto;
 `
 
 const BodyWrapper = styled.div`
@@ -37,10 +42,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  background-image: url('https://vonder-landing.web.app/assets/bg-token.png');
-  background-repeat: no-repeat;
-  background-position: bottom 24px center;
-  background-size: 90%;
+  
 
   ${({ theme }) => theme.mediaQueries.xs} {
     background-size: auto;
