@@ -1,4 +1,5 @@
-yarn install
-yarn install-ui
-yarn build
-firebase deploy
+## Instruction
+- yarn install
+- yarn install-ui
+- yarn build
+- firebase deploy
