@@ -1,7 +1,6 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '../sdk'
 
-// export const ROUTER_ADDRESS = '0xa93F69529826918A38127a76c366cA1445Fc1158' // BKC Mainnet
-export const ROUTER_ADDRESS = '0x506cb2F34CB43c70A2674B2a9D03cC3f374bEf5b' // BKC Testnet
+export const ROUTER_ADDRESS = '0x54D851C39fE28b2E24e354B5E8c0f09EfC65B51A' // BKC Mainnet
 
 // a list of tokens by chain
 type ChainTokenList = {
@@ -56,7 +55,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7', 18, 'VON', 'VONDER Token'),
+      new Token(ChainId.MAINNET, '0xEc04389a362b71Df31275bc602C51446D3B28F8C', 18, 'VON', 'VONDER Token'),
       new Token(ChainId.MAINNET, '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', 18, 'KKUB', 'Wrapped KUB'),
     ],
     [USDC, USDT],

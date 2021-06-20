@@ -16,34 +16,10 @@
     ],
     "tokens": [
     {
-        "name": "KKUB Officially-Pegged Token",
-        "symbol": "KKUB",
-        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
-    },
-    {
-        "name": "Vonder Token",
+        "name": "VONDER Token",
         "symbol": "VON",
-        "address": "0x9a42E422e27360eb7f54e0232a9f26DA5e694FC7",
+        "address": "0xEc04389a362b71Df31275bc602C51446D3B28F8C",
         "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
-    },
-    {
-        "name": "KKUB Officially-Pegged Token (Testnet)",
-        "symbol": "KKUB",
-        "address": "0xDa91a1aee4d7829c118cD6218CDA2cB2C56dd010",
-        "chainId": 25925,
-        "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
-    },
-    {
-        "name": "Vonder Token (testnet)",
-        "symbol": "VON",
-        "address": "0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe",
-        "chainId": 25925,
         "decimals": 18,
         "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
     }

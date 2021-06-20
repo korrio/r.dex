@@ -22,11 +22,8 @@ export enum Rounding {
   ROUND_UP
 }
 
-// export const FACTORY_ADDRESS = '0xeC9c39E283a7956b3EE22816648824b9DF783283' // BKC Mainnet (FoodcourtFactory)
-export const FACTORY_ADDRESS = '0x52e0895f93B3AC14825AFa5933032C8323eCF792' // BKC Testnet (FoodcourtFactory)
-
-// export const INIT_CODE_HASH = '0xf1d77ba4cb681341af63066d44297a59a8962ec4fe422a20eca5077dca88cef9' // BKC Mainnet (FoodcourtPair)
-export const INIT_CODE_HASH = '0x5cea560cf72e6e68d37a2d61d2d48884016e694f550856ff1a7b65f20bf82800' // BKC Testnet (FoodcourtPair)
+export const FACTORY_ADDRESS = '0x447DdE468Fb3B185d395D8D43D82D6636d69d481' // BKC Mainnet (VonderFactory)
+export const INIT_CODE_HASH = '0x6690dc60e9984244185659c20eaf86994af751f7b618df6124339053d9ae16b7' // BKC Mainnet (VonderPair)
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 

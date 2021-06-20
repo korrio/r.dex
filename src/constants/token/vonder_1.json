@@ -15,6 +15,14 @@
         "default"
     ],
     "tokens": [
+            {
+        "name": "KKUB Officially-Pegged Token",
+        "symbol": "KKUB",
+        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/kub.png"
+    },
     {
         "name": "KKUB Officially-Pegged Token",
         "symbol": "KKUB",
