@@ -24,9 +24,9 @@
         "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
     },
     {
-        "name": "TST Token",
-        "symbol": "TST",
-        "address": "0xBE258789563Da0B3D69D59695201cAcF8DA76aA7",
+        "name": "TST Token 2",
+        "symbol": "TST2",
+        "address": "0xBbED05D08f31165e8b478ca67b12776Ce2058b48",
         "chainId": 96,
         "decimals": 18,
         "logoURI": ""
