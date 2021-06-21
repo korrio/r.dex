@@ -1,6 +1,6 @@
 {
-  "name": "@pancakeswap/interface",
-  "description": "Pancakeswap Interface",
+  "name": "@vonderfinance/interface",
+  "description": "VONDER DEX",
   "homepage": ".",
   "private": true,
   "dependencies": {
