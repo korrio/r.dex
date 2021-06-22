@@ -1,6 +1,7 @@
 {
   "name": "@vonderfinance/interface",
   "description": "VONDER DEX",
+  "version":"1.0.0",
   "homepage": ".",
   "private": true,
   "dependencies": {

@@ -24,14 +24,6 @@
         "logoURI": "https://vonder-exchange-bkc.web.app/images/coins/VON.png"
     },
     {
-        "name": "TST Token 2",
-        "symbol": "TST2",
-        "address": "0xBbED05D08f31165e8b478ca67b12776Ce2058b48",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": ""
-    },
-    {
         "name": "Officially Wrapped KUB",
         "symbol": "KKUB",
         "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
