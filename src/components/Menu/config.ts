@@ -16,11 +16,11 @@ const config: MenuEntry[] = [
     href: '/pool',
     icon: 'LiquidityIcon',
   },
-  // {
-  //   label: 'Farms',
-  //   icon: 'FarmIcon',
-  //   href: 'https://app.vonder.finance/farms',
-  // },
+  {
+    label: 'Farms',
+    icon: 'FarmIcon',
+    href: 'https://app.vonder.finance/farms',
+  },
   {
     label: 'Pools',
     icon: 'PoolIcon',
