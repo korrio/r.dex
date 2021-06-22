@@ -1,11 +1,11 @@
 import { MenuEntry } from '@pancakeswap-libs/uikit'
 
 const config: MenuEntry[] = [
-  // {
-  //   label: 'Home',
-  //   icon: 'HomeIcon',
-  //   href: 'https://vonder-swap.web.app/',
-  // },
+  {
+    label: 'Home',
+    icon: 'HomeIcon',
+    href: 'https://app.vonder.finance/',
+  },
   {
     label: 'Exchange',
     href: '/swap',
@@ -19,13 +19,39 @@ const config: MenuEntry[] = [
   // {
   //   label: 'Farms',
   //   icon: 'FarmIcon',
-  //   href: 'https://vonder-swap.web.app/farms',
+  //   href: 'https://app.vonder.finance/farms',
   // },
-  // {
-  //   label: 'Pools',
-  //   icon: 'PoolIcon',
-  //   href: 'https://vonder-swap.web.app/pools',
-  // },
+  {
+    label: 'Pools',
+    icon: 'PoolIcon',
+    href: 'https://app.vonder.finance/pools',
+  },
+  {
+    label: 'Social',
+    icon: 'HamburgerIcon',
+    items: [
+      {
+        label: 'Twitter',
+        href: 'https://twitter.com/vonderfinance',
+      },
+      {
+        label: 'Telegram',
+        href: 'https://t.me/vonderfinance',
+      },
+      {
+        label: 'Medium',
+        href: 'https://blog.vonder.finance',
+      },
+      {
+        label: 'Github',
+        href: 'https://github.com/vonderfinance',
+      },
+      {
+        label: 'Gitbook',
+        href: 'https://docs.vonder.finance',
+      },
+    ],
+  },
 ]
 
 export default config
