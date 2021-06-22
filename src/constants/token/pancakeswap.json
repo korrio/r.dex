@@ -18,10 +18,10 @@
     {
         "name": "VONDER Token",
         "symbol": "VON",
-        "address": "0xEc04389a362b71Df31275bc602C51446D3B28F8C",
+        "address": "0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09",
         "chainId": 96,
         "decimals": 18,
-        "logoURI": "https://exchange-vonder-swap.web.app/images/coins/VON.png"
+        "logoURI": "https://vonder-exchange-bkc.web.app/images/coins/VON.png"
     },
     {
         "name": "TST Token 2",
@@ -30,6 +30,14 @@
         "chainId": 96,
         "decimals": 18,
         "logoURI": ""
+    },
+    {
+        "name": "Officially Wrapped KUB",
+        "symbol": "KKUB",
+        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://vonder-exchange-bkc.web.app/images/coins/KUB.png"
     }
     ]
 }
