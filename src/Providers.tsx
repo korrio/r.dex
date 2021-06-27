@@ -6,6 +6,7 @@ import { NetworkContextName } from './constants'
 import store from './state'
 import getLibrary from './utils/getLibrary'
 import { ThemeContextProvider } from './ThemeContext'
+import { RefreshContextProvider } from 'contexts/RefreshContext'
 
 const Web3ProviderNetwork = createWeb3ReactRoot(NetworkContextName)
 
@@ -15,7 +16,9 @@ const Providers: React.FC = ({ children }) => {
       <Web3ProviderNetwork getLibrary={getLibrary}>
         <Provider store={store}>
           <ThemeContextProvider>
-            <ModalProvider>{children}</ModalProvider>
+            <RefreshContextProvider>
+              <ModalProvider>{children}</ModalProvider>
+            </RefreshContextProvider>
           </ThemeContextProvider>
         </Provider>
       </Web3ProviderNetwork>

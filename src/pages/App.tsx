@@ -42,7 +42,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  
+
 
   ${({ theme }) => theme.mediaQueries.xs} {
     background-size: auto;
@@ -114,7 +114,7 @@ export default function App() {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [selectedLanguage])
 
-  // useGetDocumentTitlePrice()
+  useGetDocumentTitlePrice()
 
   return (
     <Suspense fallback={null}>

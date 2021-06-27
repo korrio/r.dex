@@ -10,7 +10,7 @@
     "@ethersproject/experimental": "^5.0.1",
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",
     "@pancakeswap-libs/sdk": "1.0.1",
-    "@pancakeswap-libs/uikit": "git+https://github.com/mahirocoko/vonder-uikit.git",
+    "@pancakeswap-libs/uikit": "0.29.4",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
@@ -99,8 +99,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'",
-    "install-ui": "cp -Rv uikit/dist/ node_modules/@pancakeswap-libs/uikit/",
-    "install-ui-dev": "cp -Rv uikit/ node_modules/@pancakeswap-libs/uikit/"
+    "install-ui": "yarn add git+https://github.com/mahirocoko/vonder-uikit.git"
   },
   "husky": {
     "hooks": {
