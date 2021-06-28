@@ -1,7 +1,7 @@
 import { transparentize } from 'polished'
 import React from 'react'
 import { AlertTriangle } from 'react-feather'
-import { Text } from 'mahiro-uikit2'
+import { Text } from 'the-vonder-uikit'
 import styled, { css } from 'styled-components'
 import { AutoColumn } from '../Column'
 

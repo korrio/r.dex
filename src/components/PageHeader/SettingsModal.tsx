@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal } from 'mahiro-uikit2'
+import { Modal } from 'the-vonder-uikit'
 import SlippageToleranceSetting from './SlippageToleranceSetting'
 import TransactionDeadlineSetting from './TransactionDeadlineSetting'
 

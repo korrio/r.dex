@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { Trade, TradeType } from '../../sdk'
-import { Text, Button } from 'mahiro-uikit2'
+import { Text, Button } from 'the-vonder-uikit'
 import { Repeat } from 'react-feather'
 
 import useI18n from 'hooks/useI18n'

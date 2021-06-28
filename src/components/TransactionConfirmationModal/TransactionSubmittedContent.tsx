@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Button, LinkExternal } from 'mahiro-uikit2'
+import { Button, LinkExternal } from 'the-vonder-uikit'
 import { ArrowUpCircle } from 'react-feather'
 import { ChainId } from '../../sdk'
 import { AutoColumn } from '../Column'

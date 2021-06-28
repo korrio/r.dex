@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import { Toast } from 'mahiro-uikit2'
+import { Toast } from 'the-vonder-uikit'
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState: ToastsState = {

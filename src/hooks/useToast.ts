@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { kebabCase } from 'lodash'
-import { Toast, toastTypes } from 'mahiro-uikit2'
+import { Toast, toastTypes } from 'the-vonder-uikit'
 import { useDispatch } from 'react-redux'
 
 import {

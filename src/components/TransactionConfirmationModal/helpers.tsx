@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { Heading, IconButton, CloseIcon } from 'mahiro-uikit2'
+import { Heading, IconButton, CloseIcon } from 'the-vonder-uikit'
 import { AutoColumn, ColumnCenter } from '../Column'
 
 

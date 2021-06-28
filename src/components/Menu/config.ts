@@ -1,4 +1,4 @@
-import { MenuEntry } from 'mahiro-uikit2'
+import { MenuEntry } from 'the-vonder-uikit'
 
 const config: MenuEntry[] = [
   {

@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-import { Button, ChevronDownIcon, Text } from 'mahiro-uikit2'
+import { Button, ChevronDownIcon, Text } from 'the-vonder-uikit'
 import styled from 'styled-components'
 import { darken } from 'polished'
 import useI18n from 'hooks/useI18n'

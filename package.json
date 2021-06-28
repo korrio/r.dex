@@ -50,7 +50,6 @@
     "js-cookie": "^2.2.1",
     "jsbi": "3.1.1",
     "lodash.flatmap": "^4.5.0",
-    "mahiro-uikit2": "^0.0.1",
     "multicodec": "^2.0.0",
     "multihashes": "^3.0.1",
     "polished": "^3.3.2",
@@ -69,6 +68,7 @@
     "rebass": "^4.0.7",
     "redux-localstorage-simple": "^2.3.1",
     "styled-components": "^5.2.1",
+    "the-vonder-uikit": "^0.0.1",
     "tiny-invariant": "1.1.0",
     "tiny-warning": "1.0.3",
     "toformat": "2.0.0",
@@ -100,7 +100,7 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'",
-    "install-ui": "yarn add mahiro-uikit2"
+    "install-ui": "yarn add the-vonder-uikit"
   },
   "husky": {
     "hooks": {

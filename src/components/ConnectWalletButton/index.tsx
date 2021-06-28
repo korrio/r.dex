@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, ButtonProps, useWalletModal} from 'mahiro-uikit2'
+import { Button, ButtonProps, useWalletModal} from 'the-vonder-uikit'
 import useI18n from 'hooks/useI18n'
 import useAuth from 'hooks/useAuth'
 

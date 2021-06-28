@@ -1,4 +1,4 @@
-import { Text } from 'mahiro-uikit2'
+import { Text } from 'the-vonder-uikit'
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`

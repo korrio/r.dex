@@ -9,7 +9,7 @@ import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
   WalletConnectConnector,
 } from '@web3-react/walletconnect-connector'
-import { connectorLocalStorageKey, ConnectorNames } from 'mahiro-uikit2'
+import { connectorLocalStorageKey, ConnectorNames } from 'the-vonder-uikit'
 import useToast from 'hooks/useToast'
 import { connectorsByName } from 'connectors'
 

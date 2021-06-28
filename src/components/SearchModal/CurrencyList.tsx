@@ -1,7 +1,7 @@
 import React, { CSSProperties, MutableRefObject, useCallback, useMemo } from 'react'
 import { FixedSizeList } from 'react-window'
 import styled from 'styled-components'
-import { Text } from 'mahiro-uikit2'
+import { Text } from 'the-vonder-uikit'
 import { Currency, CurrencyAmount, currencyEquals, ETHER, Token } from '../../sdk'
 import { useActiveWeb3React } from '../../hooks'
 import { useSelectedTokenList, WrappedTokenInfo } from '../../state/lists/hooks'

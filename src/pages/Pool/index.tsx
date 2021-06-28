@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Pair } from '../../sdk' // eslint-ignore
-import { Button, CardBody, Text } from 'mahiro-uikit2'
+import { Button, CardBody, Text } from 'the-vonder-uikit'
 import { Link } from 'react-router-dom'
 import CardNav from 'components/CardNav'
 import Question from 'components/QuestionHelper'

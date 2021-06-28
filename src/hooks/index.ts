@@ -1,6 +1,6 @@
 import { Web3Provider } from '@ethersproject/providers'
 import { ChainId } from '../sdk' // eslint-ignore
-import { connectorLocalStorageKey } from 'mahiro-uikit2'
+import { connectorLocalStorageKey } from 'the-vonder-uikit'
 import { useWeb3React as useWeb3ReactCore } from '@web3-react/core'
 // eslint-disable-next-line import/no-unresolved
 import { Web3ReactContextInterface } from '@web3-react/core/dist/types'
