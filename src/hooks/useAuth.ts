@@ -9,7 +9,7 @@ import {
   UserRejectedRequestError as UserRejectedRequestErrorWalletConnect,
   WalletConnectConnector,
 } from '@web3-react/walletconnect-connector'
-import { connectorLocalStorageKey, ConnectorNames } from '@pancakeswap-libs/uikit'
+import { connectorLocalStorageKey, ConnectorNames } from 'mahiro-uikit2'
 import useToast from 'hooks/useToast'
 import { connectorsByName } from 'connectors'
 
@@ -24,7 +24,7 @@ const useAuth = () => {
         window.localStorage.removeItem(connectorLocalStorageKey)
         if (error instanceof UnsupportedChainIdError) {
           toastError('Unsupported Chain Id', 'Unsupported Chain Id Error. Check your chain Id.')
-        } 
+        }
         else if (error instanceof NoEthereumProviderError || error instanceof NoBscProviderError) {
           toastError('Provider Error', 'No provider was found')
         } else if (

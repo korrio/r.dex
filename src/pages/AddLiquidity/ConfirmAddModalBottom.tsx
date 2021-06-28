@@ -1,6 +1,6 @@
 import { Currency, CurrencyAmount, Fraction, Percent } from '../../sdk' // eslint-ignore
 import React from 'react'
-import { Button, Text } from '@pancakeswap-libs/uikit'
+import { Button, Text } from 'mahiro-uikit2'
 import { TranslateString } from 'utils/translateTextHelpers'
 import { RowBetween, RowFixed } from '../../components/Row'
 import CurrencyLogo from '../../components/CurrencyLogo'

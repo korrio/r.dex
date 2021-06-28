@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardBody, Text } from '@pancakeswap-libs/uikit'
+import { Card, CardBody, Text } from 'mahiro-uikit2'
 import useI18n from 'hooks/useI18n'
 import { Trade, TradeType } from '../../sdk'
 import { Field } from '../../state/swap/actions'

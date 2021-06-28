@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Card as UIKitCard, CardBody, Text } from '@pancakeswap-libs/uikit'
+import { Button, Card as UIKitCard, CardBody, Text } from 'mahiro-uikit2'
 import { darken } from 'polished'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Link } from 'react-router-dom'

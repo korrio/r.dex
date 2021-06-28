@@ -3419,15 +3419,15 @@
     tiny-warning "^1.0.3"
     toformat "^2.0.0"
 
-"@pancakeswap-libs/uikit@git+https://github.com/mahirocoko/vonder-uikit.git":
+"@pancakeswap-libs/uikit@0.29.4":
   version "0.29.4"
-  resolved "git+https://github.com/mahirocoko/vonder-uikit.git#cad99bb48b43f2f3581ec7286044bad984b536ed"
+  resolved "https://registry.yarnpkg.com/@pancakeswap-libs/uikit/-/uikit-0.29.4.tgz#3c28d1c8ced84feb87ebf3c8a64ab32d97b3f148"
+  integrity sha512-imXRUtv2RHR6vI+KMA4vTyBecznN0hIh45T4dn48MzqdFsLXJLEg06R4A8ba/1wF8P+ntpvCDEfvjYORBkL6bg==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"
     "@types/styled-system" "^5.1.10"
     lodash "^4.17.20"
-    react-lottie "^1.2.3"
     react-popper "^2.2.5"
     react-transition-group "^4.4.1"
     styled-system "^5.1.5"
@@ -15101,6 +15101,20 @@ magic-string@^0.25.0, magic-string@^0.25.7:
   integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
   dependencies:
     sourcemap-codec "^1.4.4"
+
+mahiro-uikit2@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/mahiro-uikit2/-/mahiro-uikit2-0.0.1.tgz#2b912608cf160195749e51ab8a110f6a35beec2c"
+  integrity sha512-nQcbWrBkTmLANhEAah8GaDK6CZlQdsRJgTo6Vn0/9TCkR1cuOLPOx68yEF5ay5fKwjX4B2N5eY5QCfs66gMhAw==
+  dependencies:
+    "@popperjs/core" "^2.9.2"
+    "@types/lodash" "^4.14.168"
+    "@types/styled-system" "^5.1.10"
+    lodash "^4.17.20"
+    react-lottie "^1.2.3"
+    react-popper "^2.2.5"
+    react-transition-group "^4.4.1"
+    styled-system "^5.1.5"
 
 make-dir@^1.0.0:
   version "1.3.0"

@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from 'mahiro-uikit2'
 
 const config: MenuEntry[] = [
   {

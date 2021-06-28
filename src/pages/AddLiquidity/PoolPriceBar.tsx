@@ -1,6 +1,6 @@
 import React from 'react'
 import { Currency, Percent, Price } from '../../sdk' // eslint-ignore
-import { Text } from '@pancakeswap-libs/uikit'
+import { Text } from 'mahiro-uikit2'
 import { AutoColumn } from '../../components/Column'
 import { AutoRow } from '../../components/Row'
 import { ONE_BIPS } from '../../constants'
