@@ -24,6 +24,14 @@
         "logoURI": "https://exchange.vonder.finance/images/coins/VON.png"
     },
     {
+        "name": "MVP",
+        "symbol": "MVP",
+        "address": "0xDD7847deD760a8e7FB882B4A9B0e990323415ed9",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.vonder.finance/images/coins/MVP.svg"
+    },
+    {
         "name": "Officially Wrapped KUB",
         "symbol": "KKUB",
         "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
