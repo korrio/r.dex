@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from 'the-vonder-uikit'
 
 const config: MenuEntry[] = [
   {

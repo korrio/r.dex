@@ -1,23 +1,21 @@
 import React, { useContext } from 'react'
-import { Menu as UikitMenu} from '@pancakeswap-libs/uikit'
+import { Menu as UikitMenu} from 'the-vonder-uikit'
 import { useWeb3React } from '@web3-react/core'
 import { allLanguages } from 'constants/localisation/languageCodes'
 import { LanguageContext } from 'hooks/LanguageContext'
 import useTheme from 'hooks/useTheme'
-// import useGetPriceData from 'hooks/useGetPriceData'
-import useGetLocalProfile from 'hooks/useGetLocalProfile'
+// import useGetLocalProfile from 'hooks/useGetLocalProfile'
 import useAuth from 'hooks/useAuth'
 import links from './config'
+import { useSelector } from 'react-redux'
+import { AppState } from 'state'
 
 const Menu: React.FC = (props) => {
   const { account } = useWeb3React()
   const { login, logout } = useAuth()
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
-  // const priceData = useGetPriceData()
-  // const cakePriceUsd = priceData ? Number(priceData.prices.Cake) : undefined
-  const cakePriceUsd = 1.5;
-  const profile = useGetLocalProfile()
+  const priceData = useSelector<AppState, AppState['price']['vonderPriceUSD']>(state => state.price.vonderPriceUSD)
 
   return (
     <UikitMenu
@@ -30,8 +28,7 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={cakePriceUsd}
-      profile={profile}
+      cakePriceUsd={priceData}
       {...props}
     />
   )

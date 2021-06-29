@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { ButtonMenu, ButtonMenuItem } from '@pancakeswap-libs/uikit'
+import { ButtonMenu, ButtonMenuItem } from 'the-vonder-uikit'
 import useI18n from 'hooks/useI18n'
 
 const StyledNav = styled.div`
@@ -27,7 +27,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
           rel="noreferrer noopener"
         >
           WKUB to KUB
-        </ButtonMenuItem> 
+        </ButtonMenuItem>
       </ButtonMenu>
     </StyledNav>
   )

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { BigNumber } from '@ethersproject/bignumber'
 import { TransactionResponse } from '@ethersproject/providers'
 import { Currency, currencyEquals, ETHER, TokenAmount, WETH } from '../../sdk' // eslint-ignore
-import { MetamaskIcon, Button, CardBody, AddIcon, Text as UIKitText } from '@pancakeswap-libs/uikit'
+import { MetamaskIcon, Button, CardBody, AddIcon, Text as UIKitText } from 'the-vonder-uikit'
 import { RouteComponentProps } from 'react-router-dom'
 import { LightCard } from 'components/Card'
 import { AutoColumn, ColumnCenter } from 'components/Column'
@@ -493,7 +493,7 @@ const TokenLink = styled.a`
           <MinimalPositionCard showUnwrapped={oneCurrencyIsWBNB} pair={pair} />
         </AutoColumn>
       ) : null}
-        
+
     </>
   )
 }

@@ -11,6 +11,7 @@ import lists from './lists/reducer'
 import burn from './burn/reducer'
 import multicall from './multicall/reducer'
 import toasts from './toasts'
+import price from './price/reducer'
 import { getThemeCache } from '../utils/theme'
 
 type MergedState = {
@@ -37,7 +38,8 @@ const store = configureStore({
     burn,
     multicall,
     lists,
-    toasts
+    toasts,
+    price
   },
   // middleware: [...getDefaultMiddleware({ thunk: false }), save({ states: PERSISTED_KEYS })],
   middleware: getDefaultMiddleware({ thunk: false }).concat(save({ states: PERSISTED_KEYS })),

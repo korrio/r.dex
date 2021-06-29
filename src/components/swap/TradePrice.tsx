@@ -1,6 +1,6 @@
 import React from 'react'
 import { Price } from '../../sdk' // eslint-ignore
-import { SyncAltIcon, Text } from '@pancakeswap-libs/uikit'
+import { SyncAltIcon, Text } from 'the-vonder-uikit'
 import { StyledBalanceMaxMini } from './styleds'
 
 interface TradePriceProps {

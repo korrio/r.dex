@@ -1,0 +1,82 @@
+export default {
+  // cake: {
+  //     56: '0xF952Fc3ca7325Cc27D15885d37117676d25BfdA6',
+  //     97: '0x9bE715e1296c1f64De5c53aa600E8411823eaA63',
+  //     25925: '0x161DEE69e478E064FAA3E13caB7573B0758935E4',
+  //     96: '0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe',
+  // },
+  von: {
+      56: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC',
+      97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC',
+      96: "0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09", // VON
+      25925: "0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe" // VON-T
+  },
+  masterChef: {
+      56: '0xe70E9185F5ea7Ba3C5d63705784D8563017f2E57',
+      97: '0xB3F860B76823afB30afA8F70B52f88FF3b64fa24',
+      96: '0x60326f6Ad05adeE2ffD42B0c05c68Ead535B104E', // VONDER's MasterChef
+      25925: "0xa20ad0b2abDe9F063CffAd3A786017e0f1628BC6" // VON
+  },
+  wbnb: {
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      25925: '0xba3013a9f768a604c6752ab948c05bdaf023caef', // KKUB
+      96: '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', // KKUB
+  },
+  kkub: {
+      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      97: '0xae13d989dac2f0debff460ac112a837c89baa7cd',
+      25925: '0xba3013a9f768a604c6752ab948c05bdaf023caef', // KKUB
+      96: '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', // KKUB
+  },
+  lottery: {
+      56: '',
+      25925: '0xD9f1209a68e787016FE5fB5e092A00ab686CA001',
+  },
+  lotteryNFT: {
+      56: '',
+      25925: '0x5fe19B5b4bA33C4420a0733972bD4e9371019b7b',
+  },
+  mulltiCall: {
+      56: '0x1ee38d535d541c55c9dae27b12edf090c608e6fb',
+      97: '0x6e07D3369BE1d918eBCd523857E449E2e7733770',
+      25925: '0xcf0B89117E141B5416F09abe5D3Eb2b80BDC7a6f',
+      96: '0x2B2055615A893B68Cc010fC7302fbcD4FD890cc8',
+  },
+  busd: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0xb4617A501428c74a5BDd082686D23E9A73C0D661',
+      96: '0x518da7a4fe0da6f03cfbd7a7bc19cd14860776d8', // VDP
+  },
+  kusdt: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0xb4617A501428c74a5BDd082686D23E9A73C0D661',
+      96: '0x518da7a4fe0da6f03cfbd7a7bc19cd14860776d8', // VDP
+  },
+  kusdc: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0x7961B859859A1d4100f32eA70bb8762dDa5F3F1b',
+      96: '0xBbED05D08f31165e8b478ca67b12776Ce2058b48',
+  },
+  kdai: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0x3171874B59d7763626b76F035De2D90E44Ab8930',
+      96: '0xBbED05D08f31165e8b478ca67b12776Ce2058b48',
+  },
+  kbtc: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0xD2E84e84F8bCd48120FBbA4e753D3635D6a10875',
+      96: '0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2',
+  },
+  keth: {
+      56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
+      97: '0x78867bbeef44f2326bf8ddd1941a4439382ef2a7',
+      25925: '0x5eEF8a59eA46be9B71483080b5D9135dBeB903C0',
+      96: '0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2',
+  },
+}

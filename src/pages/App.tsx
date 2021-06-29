@@ -42,7 +42,7 @@ const BodyWrapper = styled.div`
   overflow-x: hidden;
   z-index: 1;
   justify-content: center;
-  
+
 
   ${({ theme }) => theme.mediaQueries.xs} {
     background-size: auto;
@@ -52,7 +52,7 @@ const BodyWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center 420px, 10% 230px, 90% 230px;
     background-size: contain, 266px, 266px;
-    min-height: 90vh;
+    min-height: calc(100vh - ${({ theme }) => theme.sizes.menuHeight}px);
   }
 `
 
@@ -114,7 +114,7 @@ export default function App() {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [selectedLanguage])
 
-  // useGetDocumentTitlePrice()
+  useGetDocumentTitlePrice()
 
   return (
     <Suspense fallback={null}>
