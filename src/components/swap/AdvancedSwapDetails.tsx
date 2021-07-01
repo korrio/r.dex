@@ -62,7 +62,7 @@ function TradeSummary({ trade, allowedSlippage }: { trade: Trade; allowedSlippag
             <QuestionHelper
               text={TranslateString(
                 230,
-                'For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the PancakeSwap treasury.'
+                'For each trade a 0.2% fee is paid. 0.17% goes to liquidity providers and 0.03% goes to the VONDER treasury.'
               )}
             />
           </RowFixed>
@@ -82,7 +82,8 @@ export interface AdvancedSwapDetailsProps {
 export function AdvancedSwapDetails({ trade }: AdvancedSwapDetailsProps) {
   const [allowedSlippage] = useUserSlippageTolerance()
   const TranslateString = useI18n()
-  const showRoute = Boolean(trade && trade.route.path.length > 2)
+  // const showRoute = Boolean(trade && trade.route.path.length > 2)
+  const showRoute = Boolean(true)
 
   return (
     <AutoColumn gap="md">
