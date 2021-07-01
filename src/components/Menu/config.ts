@@ -1,4 +1,4 @@
-import { MenuEntry } from '@pancakeswap-libs/uikit'
+import { MenuEntry } from 'the-vonder-uikit'
 
 const config: MenuEntry[] = [
   {
@@ -25,6 +25,16 @@ const config: MenuEntry[] = [
     label: 'Pools',
     icon: 'PoolIcon',
     href: 'https://app.vonder.finance/pools',
+  },
+  {
+    label: 'Chart',
+    icon: 'ChartIcon',
+    href: 'https://kub.loremboard.finance/chart/VON',
+  },
+  {
+    label: 'Portfolio',
+    icon: 'ChartIcon',
+    href: 'https://kub.loremboard.finance/dashboard',
   },
   {
     label: 'Social',

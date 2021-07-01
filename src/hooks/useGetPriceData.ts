@@ -1,35 +1,33 @@
 import { useEffect, useState } from 'react'
-
-type ApiResponse = {
-  prices: {
-    [key: string]: string
-  }
-  update_at: string
-}
-
-/**
- * Due to Cors the api was forked and a proxy was created
- * @see https://github.com/pancakeswap/gatsby-pancake-api/commit/e811b67a43ccc41edd4a0fa1ee704b2f510aa0ba
- */
-const api = 'https://api.pancakeswap.com/api/v1/price'
+import BigNumber from 'bignumber.js'
+import { useDispatch } from 'react-redux'
+import useRefresh from './useRefresh'
+import { getCakeAddress } from 'utils/addressHelpers'
+import { updateVonderPriceUSD } from 'state/price/actions'
 
 const useGetPriceData = () => {
-  const [data, setData] = useState<ApiResponse | null>(null)
+  const dispatch = useDispatch()
+  const { fastRefresh } = useRefresh()
+
+  const [data, setData] = useState<BigNumber>(new BigNumber(0))
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(api)
-        const res: ApiResponse = await response.json()
-
-        setData(res)
+        const res = await fetch('https://api.bkc.loremboard.finance/prices')
+        const pricesList = await res.json()
+        const vonPrice = new BigNumber(pricesList.prices[getCakeAddress()])
+        setData(vonPrice)
+        dispatch(updateVonderPriceUSD({
+          vonderPriceUSD: vonPrice.toNumber()
+        }))
       } catch (error) {
         console.error('Unable to fetch price data:', error)
       }
     }
 
     fetchData()
-  }, [setData])
+  }, [setData, dispatch, fastRefresh])
 
   return data
 }

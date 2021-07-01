@@ -10,15 +10,27 @@ const AnimatedDialogOverlay = animated(DialogOverlay)
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const StyledDialogOverlay = styled(AnimatedDialogOverlay)`
   &[data-reach-dialog-overlay] {
-    z-index: 2;
-    background-color: transparent;
+    z-index: ${({ theme }) => theme.zIndices.modal};
     overflow: hidden;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background-color: rgba(0, 0, 0, 0.3);
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: ${({ theme }) => theme.colors.overlay};
+      opacity: 0.6;
+    }
+
+    >[data-reach-dialog-content] {
+      position: relative;
+    }
   }
 `
 
@@ -32,9 +44,9 @@ const StyledDialogContent = styled(({ minHeight, maxHeight, mobile, isOpen, ...r
 })`
   &[data-reach-dialog-content] {
     margin: 0 0 2rem 0;
-    border: 1px solid ${({ theme }) => theme.colors.invertedContrast};
+    border: 1px solid ${({ theme }) => theme.colors.cardBorder};
     background-color: ${({ theme }) => theme.colors.invertedContrast};
-    box-shadow: 0 4px 8px 0 ${transparentize(0.95, '#191326')};
+    box-shadow: 0 4px 8px 0 ${transparentize(0.95, '#1f1f1f')};
     padding: 0px;
     width: 80%;
     overflow: hidden;
