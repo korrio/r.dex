@@ -48,7 +48,7 @@
         "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
     },
     {
-        "name": "Wrapped USDT",
+        "name": "Officially Wrapped USDT",
         "symbol": "KUSDT",
         "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
         "chainId": 96,
@@ -56,7 +56,7 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
     },
     {
-        "name": "Wrapped USDC",
+        "name": "Officially Wrapped USDC",
         "symbol": "KUSDC",
         "address": "0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE",
         "chainId": 96,
@@ -65,7 +65,7 @@
     },
 
     {
-        "name": "Wrapped BTC",
+        "name": "Officially Wrapped BTC",
         "symbol": "KBTC",
         "address": "0x0330b553823703E673787747D1930a12D7a14c94",
         "chainId": 96,
@@ -73,7 +73,7 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c.png"
     },
     {
-        "name": "Wrapped ETH",
+        "name": "Officially Wrapped ETH",
         "symbol": "KETH",
         "address": "0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2",
         "chainId": 96,
