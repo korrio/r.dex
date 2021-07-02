@@ -1,6 +1,6 @@
 {
     "name": "VONDER Default List",
-    "timestamp": "2021-06-17T09:56:23Z",
+    "timestamp": "2021-07-02T09:56:23Z",
     "version":
     {
         "major": 2,
@@ -40,6 +40,14 @@
         "logoURI": "https://exchange.vonder.finance/images/coins/KUB.png"
     },
     {
+        "name": "KillSwitch-Peg DAI Token",
+        "symbol": "kDAI",
+        "address": "0xc6677E014D7e2F45fB44E8036C014B916C0492a1",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+    },
+    {
         "name": "Wrapped USDT",
         "symbol": "KUSDT",
         "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
@@ -55,14 +63,7 @@
         "decimals": 18,
         "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
     },
-    {
-        "name": "Wrapped DAI",
-        "symbol": "KDAI",
-        "address": "0xc6677E014D7e2F45fB44E8036C014B916C0492a1",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
-    },
+
     {
         "name": "Wrapped BTC",
         "symbol": "KBTC",
