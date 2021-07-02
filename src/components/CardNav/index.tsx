@@ -28,6 +28,16 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
         >
           WKUB to KUB
         </ButtonMenuItem>
+        <ButtonMenuItem
+          id="pool-nav-link"
+          as="a"
+          href="https://exchange.tuktuk.finance/#/swap?outputCurrency=0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Get kDAI
+        </ButtonMenuItem>
+
       </ButtonMenu>
     </StyledNav>
   )
