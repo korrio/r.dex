@@ -42,7 +42,7 @@
     {
         "name": "KillSwitch-Peg DAI Token",
         "symbol": "kDAI",
-        "address": "0xc6677E014D7e2F45fB44E8036C014B916C0492a1",
+        "address": "0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2",
         "chainId": 96,
         "decimals": 18,
         "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
