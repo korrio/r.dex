@@ -78,6 +78,14 @@
         "chainId": 96,
         "decimals": 18,
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
+    },
+    {
+        "name": "FANS Token",
+        "symbol": "FANS",
+        "address": "0x9C04EFD1E9aD51A605eeDcb576159242FF930368",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": ""
     }
     ]
 }
