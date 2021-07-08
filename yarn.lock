@@ -21814,10 +21814,10 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-the-vonder-uikit@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/the-vonder-uikit/-/the-vonder-uikit-0.1.1.tgz#0ee6319edc4bc506ec76d76077d553788a79504b"
-  integrity sha512-V8eZO2sR4Ps8tHnrJY4Tjg86TBzmKMiwoPKwF5/WGkaTZUAeRE1HsdYBGXDDuiZkWSrMYT3HXlVER0xUwOv6wg==
+the-vonder-uikit@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/the-vonder-uikit/-/the-vonder-uikit-0.1.5.tgz#e657d40f023df32ae379948e95dad09327462c73"
+  integrity sha512-K1ZbORibA2DdnjkSbW/WgWBBe8A/76uqY4rLFzJLSOJiM7W2enfgWvVZWif5s2Yq7sphxsAoI4kCCnL81xuTMQ==
   dependencies:
     "@popperjs/core" "^2.9.2"
     "@types/lodash" "^4.14.168"

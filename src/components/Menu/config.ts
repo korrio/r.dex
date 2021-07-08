@@ -33,7 +33,7 @@ const config: MenuEntry[] = [
   },
   {
     label: 'Portfolio',
-    icon: 'ChartIcon',
+    icon: 'PortfolioIcon',
     href: 'https://kub.loremboard.finance/dashboard',
   },
   {
