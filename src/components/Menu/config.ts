@@ -29,7 +29,7 @@ const config: MenuEntry[] = [
   {
     label: 'VONtery',
     icon: 'TicketIcon',
-    href: '/vontery',
+    href: 'https://app.vonder.finance/vontery',
   },
   {
     label: 'Chart',
