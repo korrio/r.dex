@@ -27,13 +27,18 @@ const config: MenuEntry[] = [
     href: 'https://app.vonder.finance/pools',
   },
   {
+    label: 'VONtery',
+    icon: 'TicketIcon',
+    href: 'https://app.vonder.finance/vontery',
+  },
+  {
     label: 'Chart',
     icon: 'ChartIcon',
     href: 'https://kub.loremboard.finance/chart/VON',
   },
   {
     label: 'Portfolio',
-    icon: 'ChartIcon',
+    icon: 'PortfolioIcon',
     href: 'https://kub.loremboard.finance/dashboard',
   },
   {
