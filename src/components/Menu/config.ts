@@ -27,6 +27,11 @@ const config: MenuEntry[] = [
     href: 'https://app.vonder.finance/pools',
   },
   {
+    label: 'VONtery',
+    icon: 'TicketIcon',
+    href: '/vontery',
+  },
+  {
     label: 'Chart',
     icon: 'ChartIcon',
     href: 'https://kub.loremboard.finance/chart/VON',
