@@ -32,14 +32,6 @@
         "logoURI": "https://exchange.vonder.finance/images/coins/MVP.svg"
     },
     {
-        "name": "Officially Wrapped KUB",
-        "symbol": "KKUB",
-        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://exchange.vonder.finance/images/coins/KUB.png"
-    },
-    {
         "name": "KillSwitch-Peg UST Token",
         "symbol": "kUST",
         "address": "0x2920712a36270ba6C48a3D23998D6CFbbe0A677B",
@@ -48,37 +40,19 @@
         "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x23396cF899Ca06c4472205fC903bDB4de249D6fC/logo.png"
     },
     {
-        "name": "Officially Wrapped USDT",
-        "symbol": "KUSDT",
-        "address": "0x80318CAB3791E49650C8760a61196fFD2D23F6a1",
+        "name": "KillSwitch-Peg DAI Token",
+        "symbol": "kDAI",
+        "address": "0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2",
         "chainId": 96,
         "decimals": 18,
-        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
     },
     {
-        "name": "Officially Wrapped USDC",
-        "symbol": "KUSDC",
-        "address": "0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE",
+        "name": "Officially Wrapped KUB",
+        "symbol": "KKUB",
+        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
         "chainId": 96,
         "decimals": 18,
-        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png"
-    },
-
-    {
-        "name": "Officially Wrapped BTC",
-        "symbol": "KBTC",
-        "address": "0x0330b553823703E673787747D1930a12D7a14c94",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c.png"
-    },
-    {
-        "name": "Officially Wrapped ETH",
-        "symbol": "KETH",
-        "address": "0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2",
-        "chainId": 96,
-        "decimals": 18,
-        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x2170ed0880ac9a755fd29b2688956bd959f933f8.png"
-    }
-    ]
+        "logoURI": "https://exchange.vonder.finance/images/coins/KUB.png"
+    }]
 }
