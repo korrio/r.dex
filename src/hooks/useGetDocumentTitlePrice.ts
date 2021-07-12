@@ -1,21 +1,19 @@
 import { useEffect } from 'react'
-import useGetPriceData from './useGetPriceData'
+import useGetPriceData from './useGetPriceData' 
 
 const useGetDocumentTitlePrice = () => {
-  const priceData = useGetPriceData()
+  const vonPriceUsd = useGetPriceData()
 
-  const cakePriceUsd = priceData ? priceData.toNumber() : 0
-
-  const cakePriceUsdString =
-    Number.isNaN(cakePriceUsd) || cakePriceUsd === 0
+  const vonPriceUsdString =
+    Number.isNaN(vonPriceUsd) || vonPriceUsd === 0
       ? ''
-      : `$${cakePriceUsd.toLocaleString(undefined, {
+      : `$${vonPriceUsd.toLocaleString(undefined, {
           minimumFractionDigits: 3,
           maximumFractionDigits: 3,
         })}`
 
   useEffect(() => {
-    document.title = `${cakePriceUsdString} - VONDER.finance ✌️`
-  }, [cakePriceUsdString])
+    document.title = `${vonPriceUsdString} - VONDER.finance ✌️`
+  }, [vonPriceUsdString])
 }
 export default useGetDocumentTitlePrice
