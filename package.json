@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@binance-chain/bsc-connector": "^1.0.0",
+    "@binance-chain/bsc-use-wallet": "^0.8.1",
     "@crowdin/crowdin-api-client": "^1.8.16",
     "@ethersproject/experimental": "^5.0.1",
     "@pancakeswap-libs/pancake-swap-core": "^0.1.0",

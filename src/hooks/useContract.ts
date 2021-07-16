@@ -1,7 +1,7 @@
 import { Contract } from '@ethersproject/contracts'
 import { ChainId, WETH } from '../sdk' // eslint-ignore
 import { abi as IUniswapV2PairABI } from '@uniswap/v2-core/build/IUniswapV2Pair.json'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import ENS_ABI from '../constants/abis/ens-registrar.json'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
 import { ERC20_BYTES32_ABI } from '../constants/abis/erc20'
@@ -10,6 +10,13 @@ import WETH_ABI from '../constants/abis/weth.json'
 import { MULTICALL_ABI, MULTICALL_NETWORKS } from '../constants/multicall'
 import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
+import vonRouter from '../constants/abis/vonRouter.json'
+import { AbiItem } from 'web3-utils'
+import { ContractOptions } from 'web3-eth-contract'
+import useWeb3 from 'hooks/useWeb3'
+import useRouter from '../constants/router'
+
+const CHAING_ID = process.env.REACT_APP_CHAIN_ID || '96'
 
 // returns null on errors
 function useContract(address: string | undefined, ABI: any, withSignerIfPossible = true): Contract | null {
@@ -62,4 +69,21 @@ export function usePairContract(pairAddress?: string, withSignerIfPossible?: boo
 export function useMulticallContract(): Contract | null {
   const { chainId } = useActiveWeb3React()
   return useContract(chainId && MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false)
+}
+
+const useVonContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
+  const web3 = useWeb3()
+  const [contract, setContract] = useState(new web3.eth.Contract(abi, address, contractOptions))
+
+  useEffect(() => {
+    setContract(new web3.eth.Contract(abi, address, contractOptions))
+  }, [abi, address, contractOptions, web3])
+
+  return contract
+}
+
+export const useVonUsd = () => {
+  const vonRouterAbi = (vonRouter as unknown) as AbiItem
+  const vonRouterAddress = useRouter.vonRouter[CHAING_ID]
+  return useVonContract(vonRouterAbi, vonRouterAddress)
 }
