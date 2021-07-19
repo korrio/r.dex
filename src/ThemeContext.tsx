@@ -11,14 +11,41 @@ export interface ThemeContextType {
 
 const ThemeContext = React.createContext<ThemeContextType>({ isDark: false, toggleTheme: () => null })
 
-const ThemeContextProvider: React.FC = ({ children }) => {
+const themes = {
+  light: {
+    ...light,
+    colors: {
+      ...light.colors,
+      primary: '#c9b370',
+      secondary: '#0f293a',
+      textB: '#c9b370',
+      button: '#c9b370',
+      background: '#fefdfd',
+      borderColor: '#c9b370'
+    },
+  },
+  dark: {
+    ...dark,
+    colors: {
+      ...dark.colors,
+      primary: '#c9b370',
+      secondary: '#0f293a',
+      textB: '#828282',
+      button: '#c9b370',
+      background: '#0f293a',
+      borderColor: '#c9b370'
+    },
+  },
+}
+
+const ThemeContextProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
     const isDarkUserSetting = localStorage.getItem(CACHE_KEY)
     return isDarkUserSetting ? JSON.parse(isDarkUserSetting) : false
   })
 
   const toggleTheme = () => {
-    setIsDark((prevState: any) => {
+    setIsDark((prevState) => {
       localStorage.setItem(CACHE_KEY, JSON.stringify(!prevState))
       return !prevState
     })
@@ -26,7 +53,7 @@ const ThemeContextProvider: React.FC = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      <SCThemeProvider theme={isDark ? dark : light}>{children}</SCThemeProvider>
+      <SCThemeProvider theme={isDark ? themes.dark : themes.light}>{children}</SCThemeProvider>
     </ThemeContext.Provider>
   )
 }

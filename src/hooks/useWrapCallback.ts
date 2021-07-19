@@ -37,11 +37,11 @@ export default function useWrapCallback(
       console.log("WETH[chainId]");
       console.log(WETH[chainId]);
 
-      console.log("inputCurrency");
-      console.log(inputCurrency);
+      // console.log("inputCurrency");
+      // console.log(inputCurrency);
 
-      console.log("outputCurrency");
-      console.log(outputCurrency);
+      // console.log("outputCurrency");
+      // console.log(outputCurrency);
 
     const sufficientBalance = inputAmount && balance && !balance.lessThan(inputAmount)
 

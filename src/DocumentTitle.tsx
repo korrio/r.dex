@@ -9,7 +9,7 @@ const DocumentTitle: React.FC<DocumentTitleProps> = ({ title }) => {
   // const cakePriceUsd = usePriceCakeBusd()
 
   // useTitle(`$${cakePriceUsd.toFixed(3)} - ${title}`)
-  // useTitle(`VONDER.finance :: Exchange`)
+  // useTitle(`ROYALCATS.finance :: DEX`)
   return null
 }
 

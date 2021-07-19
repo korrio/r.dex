@@ -16,7 +16,7 @@ const Menu: React.FC = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const priceData = useSelector<AppState, AppState['price']['vonderPriceUSD']>(state => state.price.vonderPriceUSD)
-
+  // const priceData = 0.00;
   return (
     <UikitMenu
       links={links}

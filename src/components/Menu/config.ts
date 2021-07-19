@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: 'https://app.vonder.finance/',
+    href: '#',
   },
   {
     label: 'Exchange',
@@ -19,32 +19,12 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: 'https://app.vonder.finance/farms',
+    href: '/farms',
   },
   {
     label: 'Pools',
     icon: 'PoolIcon',
-    href: 'https://app.vonder.finance/pools',
-  },
-  {
-    label: 'VONtery',
-    icon: 'TicketIcon',
-    href: 'https://app.vonder.finance/vontery',
-  },
-  {
-    label: 'VONtery (KKUB)',
-    icon: 'TicketIcon',
-    href: 'https://kub.vonder.finance/kkub',
-  },
-  {
-    label: 'Chart',
-    icon: 'ChartIcon',
-    href: 'https://kub.loremboard.finance/chart/VON',
-  },
-  {
-    label: 'Portfolio',
-    icon: 'PortfolioIcon',
-    href: 'https://kub.loremboard.finance/dashboard',
+    href: '/pools',
   },
   {
     label: 'Social',
@@ -52,23 +32,23 @@ const config: MenuEntry[] = [
     items: [
       {
         label: 'Twitter',
-        href: 'https://twitter.com/vonderfinance',
+        href: '',
       },
       {
         label: 'Telegram',
-        href: 'https://t.me/vonderfinance',
+        href: '',
       },
       {
         label: 'Medium',
-        href: 'https://blog.vonder.finance',
+        href: '',
       },
       {
         label: 'Github',
-        href: 'https://github.com/vonderfinance',
+        href: '',
       },
       {
         label: 'Gitbook',
-        href: 'https://docs.vonder.finance',
+        href: '',
       },
     ],
   },

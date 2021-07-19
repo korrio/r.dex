@@ -23,22 +23,15 @@ export interface Ifo {
 export enum QuoteToken {
     'BNB' = 'BNB',
     'WBNB' = 'WBNB',
-    'WKUB' = 'WKUB',
-    'KKUB' = 'KKUB',
-    'VON' = 'VON',
-    'SALT' = 'SALT',
+    'ROY' = 'ROY',
+    'ROYX' = 'ROYX',
     'SUSHI' = 'SUSHI',
     'CAKE' = 'CAKE',
     'SYRUP' = 'SYRUP',
     'BUSD' = 'BUSD',
     'ETH' = 'ETH',
     'TWT' = 'TWT',
-    'UST' = 'UST',
-    'KUSDC' = 'KUSDC',
-    'KUSDT' = 'KUSDT',
-    'KDAI' = 'KDAI',
-    'KBTC' = 'KBTC',
-    'KETH' = 'KETH'
+    'UST' = 'UST'
 }
 
 export enum PoolCategory {

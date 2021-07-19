@@ -34,11 +34,14 @@ const PageHeader = ({ title, description, children }: PageHeaderProps) => {
   const [onPresentSettings] = useModal(<SettingsModal translateString={TranslateString} />)
   const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString}/>)
 
+  // const primary = `${({ theme }) => theme.colors.primary}`;
+  const primary = "#c9b370";
+
   return (
     <StyledPageHeader>
       <Flex alignItems="center">
         <Details>
-          <Heading mb="8px">{title}</Heading>
+          <Heading mb="8px" color={primary}>{title}</Heading>
           {description && (
             <Text color="textSubtle" fontSize="14px">
               {description}

@@ -1,22 +1,22 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '../sdk'
 
-export const ROUTER_ADDRESS = '0x54D851C39fE28b2E24e354B5E8c0f09EfC65B51A' // BKC Mainnet
+export const ROUTER_ADDRESS = '0x10ed43c718714eb63d5aa57b78b54704e256024e' // Pancakeswap V2 router
 
 // a list of tokens by chain
 type ChainTokenList = {
   readonly [chainId in ChainId]: Token[]
 }
 
-export const DAI = new Token(ChainId.MAINNET, '0xc6677E014D7e2F45fB44E8036C014B916C0492a1', 18, 'KDAI', 'Bitkub Dai Stablecoin')
-export const USDC = new Token(ChainId.MAINNET, '0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE', 18, 'KUSDC', 'Bitkub USD')
-export const BTCB = new Token(ChainId.MAINNET, '0x0330b553823703E673787747D1930a12D7a14c94', 18, 'BTCB', 'Bitkub BTC')
-export const USDT = new Token(ChainId.MAINNET, '0x80318CAB3791E49650C8760a61196fFD2D23F6a1', 18, 'USDT', 'Bitkub Tether USD')
+export const DAI = new Token(ChainId.MAINNET, '0xc6677E014D7e2F45fB44E8036C014B916C0492a1', 18, 'DAI', 'Dai Stablecoin')
+export const USDC = new Token(ChainId.MAINNET, '0x8b614b636FfDdfFaa261224d88C3Fc919a9634AE', 18, 'USDC', 'USD')
+export const BTCB = new Token(ChainId.MAINNET, '0x0330b553823703E673787747D1930a12D7a14c94', 18, 'BTCB', 'BTC')
+export const USDT = new Token(ChainId.MAINNET, '0x80318CAB3791E49650C8760a61196fFD2D23F6a1', 18, 'USDT', 'Tether USD')
 export const ETH = new Token(
   ChainId.MAINNET,
   '0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2',
   18,
-  'KETH',
-  'Bitkub Ethereum'
+  'ETH',
+  'Ethereum'
 )
 
 const WETH_ONLY: ChainTokenList = {
@@ -55,8 +55,9 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
 export const PINNED_PAIRS: { readonly [chainId in ChainId]?: [Token, Token][] } = {
   [ChainId.MAINNET]: [
     [
-      new Token(ChainId.MAINNET, '0xEc04389a362b71Df31275bc602C51446D3B28F8C', 18, 'VON', 'VONDER Token'),
-      new Token(ChainId.MAINNET, '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', 18, 'KKUB', 'Wrapped KUB'),
+      // new Token(ChainId.MAINNET, '0xff54da7caf3bc3d34664891fc8f3c9b6dea6c7a5', 18, 'ROY', 'VONDER Token'),
+      new Token(ChainId.MAINNET, '0xEc04389a362b71Df31275bc602C51446D3B28F8C', 18, 'ROYX', 'VONDER Token'),
+      new Token(ChainId.MAINNET, '0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5', 18, 'WBNB', 'Wrapped BNB'),
     ],
     [USDC, USDT],
     [DAI, USDT],

@@ -19,7 +19,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
         <ButtonMenuItem id="pool-nav-link" to="/pool" as={Link}>
           {TranslateString(262, 'Liquidity')}
         </ButtonMenuItem>
-        <ButtonMenuItem
+{/*        <ButtonMenuItem
           id="pool-nav-link"
           as="a"
           href="https://exchange.tuktuk.finance/#/swap?inputCurrency=0xDa91a1aee4d7829c118cD6218CDA2cB2C56dd010"
@@ -27,7 +27,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
           rel="noreferrer noopener"
         >
           WKUB to KUB
-        </ButtonMenuItem>
+        </ButtonMenuItem> */}
 {/*        <ButtonMenuItem
           id="pool-nav-link"
           as="a"

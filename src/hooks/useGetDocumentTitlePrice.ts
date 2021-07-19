@@ -13,7 +13,8 @@ const useGetDocumentTitlePrice = () => {
         })}`
 
   useEffect(() => {
-    document.title = `${vonPriceUsdString} - VONDER.finance ✌️`
+    // document.title = `${vonPriceUsdString} - VONDER.finance ✌️`
+    document.title = `ROYALCATS.finance :: DEX`;
   }, [vonPriceUsdString])
 }
 export default useGetDocumentTitlePrice

@@ -1,6 +1,6 @@
 {
-    "name": "VONDER Default List",
-    "timestamp": "2021-07-02T09:56:23Z",
+    "name": "ROYAL Default List",
+    "timestamp": "2021-03-17T09:56:23Z",
     "version":
     {
         "major": 2,
@@ -15,44 +15,100 @@
         "default"
     ],
     "tokens": [
-    {
-        "name": "VONDER Token",
-        "symbol": "VON",
-        "address": "0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09",
-        "chainId": 96,
+     {
+        "name": "ROYAL Token",
+        "symbol": "ROY",
+        "address": "0x41c8c4111914ab485d68853972183a5a72e0a12a",
+        "chainId": 97,
         "decimals": 18,
-        "logoURI": "https://exchange.vonder.finance/images/coins/VON.png"
+        "logoURI": "https://royalcats.finance/royal.png"
+    }, 
+    {
+        "name": "ROYAL PLUS Token",
+        "symbol": "ROYX",
+        "address": "0xeaef6acee9ea103476e0da3469d4b5a2ce21b989",
+        "chainId": 97,
+        "decimals": 18,
+        "logoURI": "https://royalcats.finance/royal_plus.png"
     },
     {
-        "name": "MVP",
-        "symbol": "MVP",
-        "address": "0xDD7847deD760a8e7FB882B4A9B0e990323415ed9",
-        "chainId": 96,
+        "name": "ROYAL Token",
+        "symbol": "ROY",
+        "address": "0xff54da7caf3bc3d34664891fc8f3c9b6dea6c7a5",
+        "chainId": 56,
         "decimals": 18,
-        "logoURI": "https://exchange.vonder.finance/images/coins/MVP.svg"
+        "logoURI": "https://royalcats.finance/royal.png"
+    }, 
+    {
+        "name": "ROYAL PLUS Token",
+        "symbol": "ROYX",
+        "address": "0x844fa82f1e54824655470970f7004dd90546bb28",
+        "chainId": 56,
+        "decimals": 18,
+        "logoURI": "https://royalcats.finance/royal_plus.png"
     },
     {
-        "name": "KillSwitch-Peg UST Token",
-        "symbol": "kUST",
-        "address": "0x2920712a36270ba6C48a3D23998D6CFbbe0A677B",
-        "chainId": 96,
+        "name": "BUSD",
+        "symbol": "BUSD",
+        "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+        "chainId": 56,
         "decimals": 18,
-        "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x23396cF899Ca06c4472205fC903bDB4de249D6fC/logo.png"
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
     },
     {
-        "name": "KillSwitch-Peg DAI Token",
-        "symbol": "kDAI",
-        "address": "0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2",
-        "chainId": 96,
+        "name": "USDT",
+        "symbol": "USDT",
+        "address": "0x55d398326f99059ff775485246999027b3197955",
+        "chainId": 56,
         "decimals": 18,
-        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
     },
     {
-        "name": "Officially Wrapped KUB",
-        "symbol": "KKUB",
-        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
-        "chainId": 96,
+        "name": "DAI",
+        "symbol": "DAI",
+        "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+        "chainId": 56,
         "decimals": 18,
-        "logoURI": "https://exchange.vonder.finance/images/coins/KUB.png"
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png"
+    },
+    {
+        "name": "USDC",
+        "symbol": "USDC",
+        "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+        "chainId": 56,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png"
+    },
+    {
+        "name": "Mocked BUSD Token",
+        "symbol": "BUSD-T",
+        "address": "0x322E4612792dcDD60A50f9802C823e7B51eF1e31",
+        "chainId": 97,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
+    },
+    {
+        "name": "Mocked USDT Token",
+        "symbol": "USDT-T",
+        "address": "0xbbd4e98a19869b8be03ea98c53ac981b7027cb31",
+        "chainId": 97,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
+    },
+    {
+        "name": "Mocked DAI Token",
+        "symbol": "DAI-T",
+        "address": "0x6ecc5c95d7a6cfbfb8c97e21886e31cd4cb351a0",
+        "chainId": 97,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png"
+    },
+    {
+        "name": "Mocked USDC Token",
+        "symbol": "USDC-T",
+        "address": "0x47924de860283ae11c8c4cbb9a5b5aee78628c8e",
+        "chainId": 97,
+        "decimals": 18,
+        "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d.png"
     }]
 }
