@@ -15,22 +15,6 @@
         "default"
     ],
     "tokens": [
-     {
-        "name": "ROYAL Token",
-        "symbol": "ROY",
-        "address": "0x41c8c4111914ab485d68853972183a5a72e0a12a",
-        "chainId": 97,
-        "decimals": 18,
-        "logoURI": "https://royalcats.finance/royal.png"
-    }, 
-    {
-        "name": "ROYAL PLUS Token",
-        "symbol": "ROYX",
-        "address": "0xeaef6acee9ea103476e0da3469d4b5a2ce21b989",
-        "chainId": 97,
-        "decimals": 18,
-        "logoURI": "https://royalcats.finance/royal_plus.png"
-    },
     {
         "name": "ROYAL Token",
         "symbol": "ROY",
@@ -42,7 +26,7 @@
     {
         "name": "ROYAL PLUS Token",
         "symbol": "ROYX",
-        "address": "0x844fa82f1e54824655470970f7004dd90546bb28",
+        "address": "0x47199d51A9f0dD669585F4Ac2C327DAC699289fd",
         "chainId": 56,
         "decimals": 18,
         "logoURI": "https://royalcats.finance/royal_plus.png"

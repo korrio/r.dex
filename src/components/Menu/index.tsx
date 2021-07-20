@@ -17,6 +17,20 @@ const Menu: React.FC = (props) => {
   const { isDark, toggleTheme } = useTheme()
   const priceData = useSelector<AppState, AppState['price']['vonderPriceUSD']>(state => state.price.vonderPriceUSD)
   // const priceData = 0.00;
+
+// const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
+//   return cakePriceUsd ? (
+//     <PriceLink
+//       href="https://tokenradar.io/token/0x19dade57b0bbce7d5e859ba02846820f5c0c2b09"
+//       target="_blank">
+//       <VonderRoundIcon width="24px" mr="8px" />
+//       <Text color="textSubtle" bold>{`$${cakePriceUsd.toFixed(3)}`}</Text>
+//     </PriceLink>
+//   ) : (
+//     <Skeleton width={80} height={24} />
+//   )
+// }
+
   return (
     <UikitMenu
       links={links}
@@ -28,7 +42,7 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      cakePriceUsd={priceData}
+      // cakePriceUsd={priceData}
       {...props}
     />
   )
