@@ -4,7 +4,7 @@ const config: MenuEntry[] = [
   {
     label: 'Home',
     icon: 'HomeIcon',
-    href: '#',
+    href: 'https://royalcats.finance',
   },
   {
     label: 'Exchange',
@@ -19,17 +19,17 @@ const config: MenuEntry[] = [
   {
     label: 'Farms',
     icon: 'FarmIcon',
-    href: '/farms',
+    href: 'https://royalcats.finance/farms',
     status: {
       text: "NEW",
       color: 'success',
     },
   },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: '/pools',
-  },
+  // {
+  //   label: 'Pools',
+  //   icon: 'PoolIcon',
+  //   href: '/pools',
+  // },
   // {
   //   label: 'Social',
   //   icon: 'HamburgerIcon',

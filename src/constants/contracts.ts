@@ -4,7 +4,7 @@ export default {
       97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC'
   },
   royx: {
-      56: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC',
+      56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd',
       97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC'
   },
   masterChef: {

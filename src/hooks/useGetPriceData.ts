@@ -12,28 +12,32 @@ const chainId = process.env.REACT_APP_CHAIN_ID || '96'
 const useGetPriceData = () => {
   const dispatch = useDispatch()
   const { fastRefresh } = useRefresh()
-  const vonderRouter = useVonUsd()
+  const pancakeRouter = useVonUsd()
 
   const [vonPriceUsd, setVonPriceUsd] = useState(0)
   const oneBnAmount = new BigNumber(10).pow(18)
-    // const [data, setData] = useState<BigNumber>(new BigNumber(0))
-
+  
   useEffect(() => {
     const fetchUsdPrice = async (amount: string, tokenInOutAddress: string[]) => {
-      // const result = await vonderRouter.methods.getAmountsOut(amount, tokenInOutAddress).call()
-      //   .then((res) =>
-      //     new BigNumber(res[1])
-      //   )
-      //   .then((pricesOut) => pricesOut)
+      const result = await pancakeRouter.methods.getAmountsOut(amount, tokenInOutAddress).call()
+        .then((res) =>
+          new BigNumber(res[1])
+        )
+        .then((pricesOut) => pricesOut)
 
-      // setVonPriceUsd(result.dividedBy(new BigNumber(10).pow(18)).toNumber())
-      setVonPriceUsd(0.001)
+      console.log("theResult",result)
+
+      setVonPriceUsd(result.dividedBy(new BigNumber(10).pow(18)).toNumber())
+      // setVonPriceUsd(new BigNumber("0.001").toNumber())
     }
 
-    fetchUsdPrice(oneBnAmount.toString(10), [getRoyXAddress(), contracts.busd[chainId]])
+    const theGetPriceContracts = [getRoyXAddress(), contracts.busd[chainId]];
+    console.log("theGetPriceContracts",theGetPriceContracts);
+
+    fetchUsdPrice(oneBnAmount.toString(10), theGetPriceContracts)
     dispatch(updateVonderPriceUSD({ vonderPriceUSD: vonPriceUsd }))
 
-  }, [dispatch, fastRefresh, vonderRouter.methods, oneBnAmount, vonPriceUsd])
+  }, [dispatch, fastRefresh, pancakeRouter.methods, oneBnAmount, vonPriceUsd])
 
   return vonPriceUsd
 }

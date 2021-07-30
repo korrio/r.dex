@@ -16,7 +16,7 @@ const Menu: React.FC = (props) => {
   const { selectedLanguage, setSelectedLanguage } = useContext(LanguageContext)
   const { isDark, toggleTheme } = useTheme()
   const priceData = useSelector<AppState, AppState['price']['vonderPriceUSD']>(state => state.price.vonderPriceUSD)
-  // const priceData = 0.00;
+  console.log("priceData",priceData);
 
 // const CakePrice: React.FC<Props> = ({ cakePriceUsd }) => {
 //   return cakePriceUsd ? (
@@ -42,7 +42,9 @@ const Menu: React.FC = (props) => {
       currentLang={selectedLanguage?.code || ''}
       langs={allLanguages}
       setLang={setSelectedLanguage}
-      // cakePriceUsd={priceData}
+      cakePriceUsd={priceData}
+      // cakePriceUrl={loremBoardUrl}
+      // cakeIcon={IconLogoUrl}
       {...props}
     />
   )

@@ -11,12 +11,13 @@ import { MULTICALL_ABI, MULTICALL_NETWORKS } from '../constants/multicall'
 import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
 import vonRouter from '../constants/abis/vonRouter.json'
+import pancakeRouter from '../constants/abis/pancake_router.json'
 import { AbiItem } from 'web3-utils'
 import { ContractOptions } from 'web3-eth-contract'
 import useWeb3 from 'hooks/useWeb3'
 import useRouter from '../constants/router'
 
-const CHAING_ID = process.env.REACT_APP_CHAIN_ID || '96'
+const CHAIN_ID = process.env.REACT_APP_CHAIN_ID || '96'
 
 // returns null on errors
 function useContract(address: string | undefined, ABI: any, withSignerIfPossible = true): Contract | null {
@@ -71,7 +72,7 @@ export function useMulticallContract(): Contract | null {
   return useContract(chainId && MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false)
 }
 
-const useVonContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
+const useRouterContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
   const web3 = useWeb3()
   const [contract, setContract] = useState(new web3.eth.Contract(abi, address, contractOptions))
 
@@ -83,7 +84,9 @@ const useVonContract = (abi: AbiItem, address: string, contractOptions?: Contrac
 }
 
 export const useVonUsd = () => {
-  const vonRouterAbi = (vonRouter as unknown) as AbiItem
-  const vonRouterAddress = useRouter.vonRouter[CHAING_ID]
-  return useVonContract(vonRouterAbi, vonRouterAddress)
+  const pancakeRouterAbi = (pancakeRouter as unknown) as AbiItem
+  // const pancakeRouterAbi = (vonRouter as unknown) as AbiItem
+  // const vonRouterAddress = pancakeRouter.vonRouter[CHAIN_ID]
+  const pancakeRouterAddress = '0x10ed43c718714eb63d5aa57b78b54704e256024e';
+  return useRouterContract(pancakeRouterAbi, pancakeRouterAddress)
 }
