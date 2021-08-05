@@ -12,9 +12,9 @@ const useGetDocumentTitlePrice = () => {
           maximumFractionDigits: 3,
         })}`
 
-  useEffect(() => {
-    // document.title = `${vonPriceUsdString} - VONDER.finance ✌️`
-    document.title = `ROYALCATS.finance :: DEX`;
-  }, [vonPriceUsdString])
+  // useEffect(() => {
+  //   // document.title = `${vonPriceUsdString} - VONDER.finance ✌️`
+  //   document.title = `ROYALCATS.finance :: DEX`;
+  // }, [vonPriceUsdString])
 }
 export default useGetDocumentTitlePrice
