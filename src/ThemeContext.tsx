@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { ThemeProvider as SCThemeProvider } from 'styled-components'
-import { light, dark } from 'the-vonder-uikit'
+import { light, dark } from '@pancakeswap-libs/uikit'
 
 const CACHE_KEY = 'IS_DARK'
 
@@ -14,27 +14,27 @@ const ThemeContext = React.createContext<ThemeContextType>({ isDark: true, toggl
 const themes = {
   light: {
     ...light,
-    colors: {
-      ...light.colors,
-      primary: '#c9b370',
-      secondary: '#0f293a',
-      textB: '#c9b370',
-      button: '#c9b370',
-      background: '#fefdfd',
-      borderColor: '#c9b370'
-    },
+    // colors: {
+    //   ...light.colors,
+    //   primary: '#c9b370',
+    //   secondary: '#0f293a',
+    //   textB: '#c9b370',
+    //   button: '#c9b370',
+    //   background: '#fefdfd',
+    //   borderColor: '#c9b370'
+    // },
   },
   dark: {
     ...dark,
-    colors: {
-      ...dark.colors,
-      primary: '#c9b370',
-      secondary: '#0f293a',
-      textB: '#828282',
-      button: '#c9b370',
-      background: '#0f293a',
-      borderColor: '#c9b370'
-    },
+    // colors: {
+    //   ...dark.colors,
+    //   primary: '#c9b370',
+    //   secondary: '#0f293a',
+    //   textB: '#828282',
+    //   button: '#c9b370',
+    //   background: '#0f293a',
+    //   borderColor: '#c9b370'
+    // },
   },
 }
 
@@ -53,7 +53,7 @@ const ThemeContextProvider = ({ children }) => {
 
   return (
     <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-      <SCThemeProvider theme={isDark ? themes.dark : themes.light}>{children}</SCThemeProvider>
+      <SCThemeProvider theme={themes.dark}>{children}</SCThemeProvider>
     </ThemeContext.Provider>
   )
 }

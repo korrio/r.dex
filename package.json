@@ -1,7 +1,7 @@
 {
   "name": "@vonderfinance/vonder-exchange",
   "description": "VONDER DEX",
-  "version":"1.0.3.1",
+  "version":"1.0.4",
   "homepage": ".",
   "private": true,
   "dependencies": {
@@ -87,7 +87,8 @@
     "prettier": "^2.1.2",
     "qs": "^6.9.4",
     "serve": "^11.3.0",
-    "start-server-and-test": "^1.11.0"
+    "start-server-and-test": "^1.11.0",
+    "source-map-explorer": "^2.5.2"
   },
   "resolutions": {
     "@walletconnect/web3-provider": "1.1.1-alpha.0"
@@ -101,7 +102,8 @@
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "integration-test": "start-server-and-test 'serve build -l 3000' http://localhost:3000 'cypress run'",
-    "install-ui": "yarn add the-vonder-uikit"
+    "install-ui": "yarn add the-vonder-uikit",
+    "postinstall": "sh ./custom-pancake.sh"
   },
   "husky": {
     "hooks": {

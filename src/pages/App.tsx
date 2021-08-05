@@ -54,7 +54,6 @@ const BodyWrapper = styled.div`
     background-repeat: no-repeat;
     background-position: center 420px, 10% 230px, 90% 230px;
     background-size: contain, 266px, 266px;
-    min-height: calc(100vh - ${({ theme }) => theme.sizes.menuHeight}px);
   }
 `
 
