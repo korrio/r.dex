@@ -11,13 +11,18 @@ import { MULTICALL_ABI, MULTICALL_NETWORKS } from '../constants/multicall'
 import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
 import vonRouter from '../constants/abis/vonRouter.json'
-import pancakeRouter from '../constants/abis/pancake_router.json'
+import VDP_MASTER_ABI from '../constants/abis/vdpMasterAbi.json'
 import { AbiItem } from 'web3-utils'
 import { ContractOptions } from 'web3-eth-contract'
 import useWeb3 from 'hooks/useWeb3'
 import useRouter from '../constants/router'
+import contractsAddress from '../constants/contracts'
+import BUSD_ABI from '../constants/token/busd.json'
+import XVON_ABI from '../constants/token/xvon.json'
+import VDP_ABI from '../constants/token/vdp.json'
+import { getVdpMasterAddress, getRoyMasterAddress } from 'utils/addressHelpers'
 
-const CHAIN_ID = process.env.REACT_APP_CHAIN_ID || '96'
+const CHAING_ID = process.env.REACT_APP_CHAIN_ID || '56'
 
 // returns null on errors
 function useContract(address: string | undefined, ABI: any, withSignerIfPossible = true): Contract | null {
@@ -72,7 +77,7 @@ export function useMulticallContract(): Contract | null {
   return useContract(chainId && MULTICALL_NETWORKS[chainId], MULTICALL_ABI, false)
 }
 
-const useRouterContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
+const useVonContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
   const web3 = useWeb3()
   const [contract, setContract] = useState(new web3.eth.Contract(abi, address, contractOptions))
 
@@ -84,9 +89,43 @@ const useRouterContract = (abi: AbiItem, address: string, contractOptions?: Cont
 }
 
 export const useVonUsd = () => {
-  const pancakeRouterAbi = (pancakeRouter as unknown) as AbiItem
-  // const pancakeRouterAbi = (vonRouter as unknown) as AbiItem
-  // const vonRouterAddress = pancakeRouter.vonRouter[CHAIN_ID]
-  const pancakeRouterAddress = '0x10ed43c718714eb63d5aa57b78b54704e256024e';
-  return useRouterContract(pancakeRouterAbi, pancakeRouterAddress)
+  const vonRouterAbi = (vonRouter as unknown) as AbiItem
+  const vonRouterAddress = useRouter.vonRouter[CHAING_ID]
+  return useVonContract(vonRouterAbi, vonRouterAddress)
+}
+
+export function useVDPMasterContract(withSignerIfPossible?: boolean): Contract | null {
+  const vdpMasterAddress = contractsAddress.roymaster[CHAING_ID]
+  const vdpMasterAbi = (VDP_MASTER_ABI as unknown) as AbiItem
+  return useContract(vdpMasterAddress, vdpMasterAbi, withSignerIfPossible)
+}
+
+export function useBusdContract(withSignerIfPossible?: boolean): Contract | null {
+  const busdAddress = contractsAddress.busd[CHAING_ID]
+  const busdAbi = (BUSD_ABI as unknown) as AbiItem
+  return useContract(busdAddress, busdAbi, withSignerIfPossible)
+}
+
+export function useXvonContract(withSignerIfPossible?: boolean): Contract | null {
+  const xvonAddress = contractsAddress.busd[CHAING_ID]
+  const xvonAbi = (XVON_ABI as unknown) as AbiItem
+  return useContract(xvonAddress, xvonAbi, withSignerIfPossible)
+}
+
+export function useVdpContract(withSignerIfPossible?: boolean): Contract | null {
+  const vdpAddress = contractsAddress.roy[CHAING_ID]
+  const vdpAbi = (VDP_ABI as unknown) as AbiItem
+  return useContract(vdpAddress, vdpAbi, withSignerIfPossible)
+}
+
+export function useRedeemFeeCalculate() {
+
+  const useXvon = useXvonContract()
+  const useVdp = useVdpContract()
+  const VDP_MASTER_ADDRESS = getRoyMasterAddress()
+  // get balances of vdpMaster in xVON
+  const xvonBalances = useXvon?.balanceOf(VDP_MASTER_ADDRESS)
+  // get total supply of vdp
+  const vdpTotalSupply = useVdp?.totalSupply()
+  return { xvonBalances, vdpTotalSupply}
 }

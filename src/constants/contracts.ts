@@ -7,6 +7,10 @@ export default {
       56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd',
       97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC'
   },
+  roymaster: {
+      56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd',
+      97: '0x47199d51a9f0dd669585f4ac2c327dac699289fd'
+  },
   masterChef: {
       56: '0xe70E9185F5ea7Ba3C5d63705784D8563017f2E57',
       97: '0xB3F860B76823afB30afA8F70B52f88FF3b64fa24'

@@ -19,6 +19,9 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
         <ButtonMenuItem id="pool-nav-link" to="/pool" as={Link}>
           {TranslateString(262, 'Liquidity')}
         </ButtonMenuItem>
+        <ButtonMenuItem id="mint-nav-link" to="/mintredeem" as={Link}>
+          Mint-Redeem
+        </ButtonMenuItem>
 {/*        <ButtonMenuItem
           id="pool-nav-link"
           as="a"

@@ -1,80 +1,83 @@
 import { MenuEntry } from 'the-vonder-uikit'
 
-const config: MenuEntry[] = [
-  {
-    label: 'Home',
-    icon: 'HomeIcon',
-    href: 'https://royalcats.finance',
-  },
-  // {
-  //   label: 'Exchange',
-  //   href: '/swap',
-  //   icon: 'ExchangeIcon',
-  // },
-  // {
-  //   label: 'Liquidity',
-  //   href: '/pool',
-  //   icon: 'LiquidityIcon',
-  // },
-      {
-      label: 'Trade',
-      icon: 'TradeIcon',
-      items: [
-        {
-          label: 'Exchange',
-          href: 'https://exchange.royalcats.finance',
+const config: MenuEntry[] = [{
+        label: 'Home',
+        icon: 'HomeIcon',
+        href: 'https://royalcats.finance',
+    },
+    // {
+    //   label: 'Exchange',
+    //   href: '/swap',
+    //   icon: 'ExchangeIcon',
+    // },
+    // {
+    //   label: 'Liquidity',
+    //   href: '/pool',
+    //   icon: 'LiquidityIcon',
+    // },
+    {
+        label: 'Trade',
+        icon: 'TradeIcon',
+        items: [{
+                label: 'Exchange',
+                href: '/swap',
+            },
+            {
+                label: 'Liquidity',
+                href: '/pool',
+            },
+            {
+                label: 'Mint-Redeem',
+                href: '/mintredeem',
+            }
+        ],
+    },
+    {
+        label: 'Farms',
+        icon: 'FarmIcon',
+        href: 'https://royalcats.finance/farms',
+    },
+    {
+        label: 'Pools',
+        icon: 'PoolIcon',
+        href: 'https://royalcats.finance/pools',
+    },
+    {
+        label: 'Lottery',
+        icon: 'TicketIcon',
+        href: 'https://royalcats.finance/lottery',
+        status: {
+            text: "NEW",
+            color: 'success',
         },
-        {
-          label: 'Liquidity',
-          href: 'https://exchange.royalcats.finance/#/pool',
-        },
-      ],
     },
-  {
-    label: 'Farms',
-    icon: 'FarmIcon',
-    href: 'https://royalcats.finance/farms',
-    status: {
-      text: "NEW",
-      color: 'success',
-    },
-  },
-  {
-    label: 'Pools',
-    icon: 'PoolIcon',
-    href: 'https://royalcats.finance/pools',
-    status: {
-      text: "NEW",
-      color: 'success',
-    },
-  },
-  // {
-  //   label: 'Social',
-  //   icon: 'HamburgerIcon',
-  //   items: [
-  //     {
-  //       label: 'Twitter',
-  //       href: '',
-  //     },
-  //     {
-  //       label: 'Telegram',
-  //       href: '',
-  //     },
-  //     {
-  //       label: 'Medium',
-  //       href: '',
-  //     },
-  //     {
-  //       label: 'Github',
-  //       href: '',
-  //     },
-  //     {
-  //       label: 'Gitbook',
-  //       href: '',
-  //     },
-  //   ],
-  // },
-  {
+    // {
+    //   label: 'Social',
+    //   icon: 'HamburgerIcon',
+    //   items: [
+    //     {
+    //       label: 'Twitter',
+    //       href: '',
+    //     },
+    //     {
+    //       label: 'Telegram',
+    //       href: '',
+    //     },
+    //     {
+    //       label: 'Medium',
+    //       href: '',
+    //     },
+    //     {
+    //       label: 'Github',
+    //       href: '',
+    //     },
+    //     {
+    //       label: 'Gitbook',
+    //       href: '',
+    //     },
+    //   ],
+    // },
+    {
         label: 'More',
         icon: 'MoreIcon',
         items: [{

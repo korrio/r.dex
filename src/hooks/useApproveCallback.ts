@@ -1,6 +1,6 @@
 import { MaxUint256 } from '@ethersproject/constants'
 import { TransactionResponse } from '@ethersproject/providers'
-import { Trade, TokenAmount, CurrencyAmount, ETHER } from '../sdk' // eslint-ignore
+import { Trade, TokenAmount, CurrencyAmount, ETHER, JSBI } from '../sdk' // eslint-ignore
 import { useCallback, useMemo } from 'react'
 import { ROUTER_ADDRESS } from '../constants'
 import { useTokenAllowance } from '../data/Allowances'
@@ -8,8 +8,12 @@ import { Field } from '../state/swap/actions'
 import { useTransactionAdder, useHasPendingApproval } from '../state/transactions/hooks'
 import { computeSlippageAdjustedAmounts } from '../utils/prices'
 import { calculateGasMargin } from '../utils'
-import { useTokenContract } from './useContract'
+import { useBusdContract, useTokenContract, useVdpContract, useXvonContract } from './useContract'
 import { useActiveWeb3React } from './index'
+import { getBusdAddress, getRoyXAddress, getRoyAddress, getRoyMasterAddress } from 'utils/addressHelpers'
+import { ethers } from 'ethers'
+
+const VDP_MASTER_ADDRESS = getRoyMasterAddress()
 
 export enum ApprovalState {
   UNKNOWN,
@@ -27,20 +31,20 @@ export function useApproveCallback(
   const token = amountToApprove instanceof TokenAmount ? amountToApprove.token : undefined
   const currentAllowance = useTokenAllowance(token, account ?? undefined, spender)
   const pendingApproval = useHasPendingApproval(token?.address, spender)
-
   // check the current approval status
   const approvalState: ApprovalState = useMemo(() => {
     if (!amountToApprove || !spender) return ApprovalState.UNKNOWN
     if (amountToApprove.currency === ETHER) return ApprovalState.APPROVED
     // we might not have enough data to know whether or not we need to approve
     if (!currentAllowance) return ApprovalState.UNKNOWN
-
+    
+    // console.log('pendingApproval', pendingApproval)
     // amountToApprove will be defined if currentAllowance is
     return currentAllowance.lessThan(amountToApprove)
-      ? pendingApproval
-        ? ApprovalState.PENDING
-        : ApprovalState.NOT_APPROVED
-      : ApprovalState.APPROVED
+    ? pendingApproval
+    ? ApprovalState.PENDING
+    : ApprovalState.NOT_APPROVED
+    : ApprovalState.APPROVED
   }, [amountToApprove, currentAllowance, pendingApproval, spender])
 
   const tokenContract = useTokenContract(token?.address)
@@ -51,6 +55,7 @@ export function useApproveCallback(
       console.error('approve was called unnecessarily')
       return
     }
+
     if (!token) {
       console.error('no token')
       return
@@ -105,4 +110,52 @@ export function useApproveCallbackFromTrade(trade?: Trade, allowedSlippage = 0) 
     [trade, allowedSlippage]
   )
   return useApproveCallback(amountToApprove, ROUTER_ADDRESS)
+}
+
+export const useApproveBusd = (account: string | undefined) => {
+
+  const busdContract = useBusdContract()
+  
+  const handleApproveBusd = useCallback(async () => {
+    try {
+      const tx = await busdContract?.approve(VDP_MASTER_ADDRESS, ethers.constants.MaxUint256).send({ from: account })
+      return tx
+    } catch (e) {
+      return false
+    }
+  }, [account, busdContract])
+
+  return { onApproveBusd: handleApproveBusd }
+}
+
+export const useApproveXvon = (account: string | undefined) => {
+
+  const xvonContract = useXvonContract()
+  
+  const handleApproveXvon = useCallback(async () => {
+    try {
+      const tx = await xvonContract?.approve(VDP_MASTER_ADDRESS, ethers.constants.MaxUint256).send({ from: account })
+      return tx
+    } catch (e) {
+      return false
+    }
+  }, [account, xvonContract])
+
+  return { onApproveXvon: handleApproveXvon }
+}
+
+export const useApproveVdp = (account: string | undefined) => {
+
+  const vdpContract = useVdpContract()
+  
+  const handleApproveXvon = useCallback(async () => {
+    try {
+      const tx = await vdpContract?.approve(VDP_MASTER_ADDRESS, ethers.constants.MaxUint256).send({ from: account })
+      return tx
+    } catch (e) {
+      return false
+    }
+  }, [account, vdpContract])
+
+  return { onApproveVdp: handleApproveXvon }
 }

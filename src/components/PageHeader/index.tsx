@@ -9,6 +9,7 @@ interface PageHeaderProps {
   title: ReactNode
   description?: ReactNode
   children?: ReactNode
+  isMintPage?: boolean
 }
 
 const HistoryIcon = () => (
@@ -29,35 +30,39 @@ const Details = styled.div`
   flex: 1;
 `
 
-const PageHeader = ({ title, description, children }: PageHeaderProps) => {
+const PageHeader = ({ title, description, children, isMintPage }: PageHeaderProps) => {
   const TranslateString = useI18n()
   const [onPresentSettings] = useModal(<SettingsModal translateString={TranslateString} />)
-  const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString}/>)
-
-  // const primary = `${({ theme }) => theme.colors.primary}`;
-  const primary = "#c9b370";
+  const [onPresentRecentTransactions] = useModal(<RecentTransactionsModal translateString={TranslateString} />)
 
   return (
     <StyledPageHeader>
       <Flex alignItems="center">
         <Details>
-          <Heading mb="8px" color={primary}>{title}</Heading>
+          <Heading mb="8px" style={{ display: 'flex', fontSize: !isMintPage ? '20px' : '24px' }}>
+            {isMintPage && <img style={{ marginRight: '8px' }} src="/vdp-logo.png" alt="vdp logo" width="28" />}
+            {title}
+          </Heading>
           {description && (
             <Text color="textSubtle" fontSize="14px">
               {description}
             </Text>
           )}
         </Details>
-        <IconButton variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
-          <CogIcon width="24px" color="currentColor" />
-        </IconButton>
-        <IconButton
-          variant="text"
-          onClick={onPresentRecentTransactions}
-          title={TranslateString(1202, 'Recent transactions')}
-        >
-          <HistoryIcon />
-        </IconButton>
+        {!isMintPage && (
+          <>
+            <IconButton variant="text" onClick={onPresentSettings} title={TranslateString(1200, 'Settings')}>
+              <CogIcon width="24px" color="currentColor" />
+            </IconButton>
+            <IconButton
+              variant="text"
+              onClick={onPresentRecentTransactions}
+              title={TranslateString(1202, 'Recent transactions')}
+            >
+              <HistoryIcon />
+            </IconButton>
+          </>
+        )}
       </Flex>
       {children && <Text mt="16px">{children}</Text>}
     </StyledPageHeader>
