@@ -12,6 +12,8 @@ import { getContract } from '../utils'
 import { useActiveWeb3React } from './index'
 import vonRouter from '../constants/abis/vonRouter.json'
 import VDP_MASTER_ABI from '../constants/abis/vdpMasterAbi.json'
+import PANCAKE_ROUTER_ABI from '../constants/abis/pancakeRouterAbi.json'
+
 import { AbiItem } from 'web3-utils'
 import { ContractOptions } from 'web3-eth-contract'
 import useWeb3 from 'hooks/useWeb3'
@@ -89,8 +91,8 @@ const useVonContract = (abi: AbiItem, address: string, contractOptions?: Contrac
 }
 
 export const useVonUsd = () => {
-  const vonRouterAbi = (vonRouter as unknown) as AbiItem
-  const vonRouterAddress = useRouter.vonRouter[CHAING_ID]
+  const vonRouterAbi = (PANCAKE_ROUTER_ABI as unknown) as AbiItem
+  const vonRouterAddress = contractsAddress.pancakeRouter[CHAING_ID]
   return useVonContract(vonRouterAbi, vonRouterAddress)
 }
 

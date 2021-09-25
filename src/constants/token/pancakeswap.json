@@ -16,15 +16,15 @@
     ],
     "tokens": [
     {
-        "name": "ROYAL Token",
+        "name": "ROYAL Token by ROYAL GROUP",
         "symbol": "ROY",
-        "address": "0xff54da7caf3bc3d34664891fc8f3c9b6dea6c7a5",
+        "address": "0xCaCc2520f7066815447A8249f7aB092c9D8545f2",
         "chainId": 56,
         "decimals": 18,
         "logoURI": "https://royalcats.finance/royal.png"
     }, 
     {
-        "name": "ROYAL PLUS Token",
+        "name": "ROYAL PLUS Token by ROYAL GROUP",
         "symbol": "ROYX",
         "address": "0x47199d51A9f0dD669585F4Ac2C327DAC699289fd",
         "chainId": 56,
@@ -32,7 +32,7 @@
         "logoURI": "https://royalcats.finance/royal_plus.png"
     },
     {
-        "name": "BUSD",
+        "name": "BUSD by Binance",
         "symbol": "BUSD",
         "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
         "chainId": 56,
@@ -40,7 +40,7 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0xe9e7cea3dedca5984780bafc599bd69add087d56.png"
     },
     {
-        "name": "USDT",
+        "name": "USDT by Tether",
         "symbol": "USDT",
         "address": "0x55d398326f99059ff775485246999027b3197955",
         "chainId": 56,
@@ -48,7 +48,7 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x55d398326f99059ff775485246999027b3197955.png"
     },
     {
-        "name": "DAI",
+        "name": "DAI by MakerDAO",
         "symbol": "DAI",
         "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
         "chainId": 56,
@@ -56,7 +56,7 @@
         "logoURI": "https://exchange.pancakeswap.finance/images/coins/0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3.png"
     },
     {
-        "name": "USDC",
+        "name": "USDC by Circle",
         "symbol": "USDC",
         "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
         "chainId": 56,

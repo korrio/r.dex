@@ -34,7 +34,7 @@ const useGetPriceData = () => {
     const theGetPriceContracts = [getRoyXAddress(), contracts.busd[chainId]];
     console.log("theGetPriceContracts",theGetPriceContracts);
 
-    // fetchUsdPrice(oneBnAmount.toString(10), theGetPriceContracts)
+    fetchUsdPrice(oneBnAmount.toString(10), theGetPriceContracts)
     dispatch(updateVonderPriceUSD({ vonderPriceUSD: vonPriceUsd }))
 
   }, [dispatch, fastRefresh, pancakeRouter.methods, oneBnAmount, vonPriceUsd])

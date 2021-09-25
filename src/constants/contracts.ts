@@ -14,6 +14,10 @@ export default {
       56: '0xb1708d091C455D15a183767C2428Ec212DD6a95C', // ROYMaster
       97: '0x47199d51a9f0dd669585f4ac2c327dac699289fd'
   },
+  pancakeRouter: {
+    56: '0x10ed43c718714eb63d5aa57b78b54704e256024e',
+    97: ''
+  },
   masterChef: {
       56: '0xe70E9185F5ea7Ba3C5d63705784D8563017f2E57',
       97: '0xB3F860B76823afB30afA8F70B52f88FF3b64fa24'
