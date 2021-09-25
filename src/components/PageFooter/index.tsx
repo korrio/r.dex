@@ -41,7 +41,7 @@ const PageFooter = ({ vdpBalance = '0', busdRedeemableBalance = '0' }: PageFoote
         <Details>
           <Row>
             <TextTitle>You Own:</TextTitle>
-            <VDPValue>{vdpBalance} VDP</VDPValue>
+            <VDPValue>{vdpBalance} ROY</VDPValue>
           </Row>
           <Row style={{ marginTop: '8px' }}>
             <TextTitle>Redeemable Quota:</TextTitle>

@@ -1,14 +1,17 @@
 export default {
+  xvon: {
+    56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd' // ROYX
+  },
   roy: {
-      56: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC',
+      56: '0xCaCc2520f7066815447A8249f7aB092c9D8545f2', // ROY
       97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC'
   },
   royx: {
-      56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd',
+      56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd', // ROYX
       97: '0x63A5590eE486961328ca7e72ca1b95E2771C30DC'
   },
   roymaster: {
-      56: '0x47199d51a9f0dd669585f4ac2c327dac699289fd',
+      56: '0xb1708d091C455D15a183767C2428Ec212DD6a95C', // ROYMaster
       97: '0x47199d51a9f0dd669585f4ac2c327dac699289fd'
   },
   masterChef: {

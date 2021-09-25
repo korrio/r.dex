@@ -10,10 +10,10 @@ import { computeSlippageAdjustedAmounts } from '../utils/prices'
 import { calculateGasMargin } from '../utils'
 import { useBusdContract, useTokenContract, useVdpContract, useXvonContract } from './useContract'
 import { useActiveWeb3React } from './index'
-import { getBusdAddress, getRoyXAddress, getRoyAddress, getRoyMasterAddress } from 'utils/addressHelpers'
+import { getBusdAddress, getCakeAddress, getVdpAddress, getVdpMasterAddress } from 'utils/addressHelpers'
 import { ethers } from 'ethers'
 
-const VDP_MASTER_ADDRESS = getRoyMasterAddress()
+const VDP_MASTER_ADDRESS = getVdpMasterAddress()
 
 export enum ApprovalState {
   UNKNOWN,
@@ -128,9 +128,10 @@ export const useApproveBusd = (account: string | undefined) => {
   return { onApproveBusd: handleApproveBusd }
 }
 
-export const useApproveXvon = (account: string | undefined) => {
+export const useApproveXvon = () => {
 
   const xvonContract = useXvonContract()
+  const { account } = useActiveWeb3React()
   
   const handleApproveXvon = useCallback(async () => {
     try {

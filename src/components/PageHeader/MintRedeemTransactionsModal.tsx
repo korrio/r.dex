@@ -15,42 +15,42 @@ import { useRedeemFeeCalculate } from 'hooks/useContract'
 import useWeb3 from 'hooks/useWeb3'
 
 type MintRedeemTransactionsModalProps = {
-  onDismiss?: () => void
-  isRedeem?: boolean
-  currency?: Currency | null
-  totalAvailable?: string
-  showMaxButton?: boolean
-  currencyMaxAmount?: CurrencyAmount
-  disabledConformButton: boolean
+    onDismiss ? : () => void
+    isRedeem ? : boolean
+    currency ? : Currency | null
+    totalAvailable ? : string
+    showMaxButton ? : boolean
+    currencyMaxAmount ? : CurrencyAmount
+    disabledConformButton: boolean
 }
 
 const defaultOnDismiss = () => null
 
-const Row = styled.div`
+const Row = styled.div `
   display: flex;
   flex-direction: row;
   gap: 40px;
 `
 
-const FooterContent = styled.div`
+const FooterContent = styled.div `
   max-width: 500px;
   padding: 24px;
   line-height: 1.5rem;
   font-size: 14px;
 `
 
-const Details = styled.div`
+const Details = styled.div `
   width: 100%;
 `
 
-const InputRow = styled.div<{ selected: boolean }>`
+const InputRow = styled.div < { selected: boolean } > `
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   padding: ${({ selected }) => (selected ? '0.75rem 0.5rem 0.75rem 1rem' : '0.75rem 0.75rem 0.75rem 1rem')};
 `
 
-const CurrencySelect = styled.button<{ selected: boolean }>`
+const CurrencySelect = styled.button < { selected: boolean } > `
   align-items: center;
   height: 34px;
   font-size: 16px;
@@ -69,13 +69,13 @@ const CurrencySelect = styled.button<{ selected: boolean }>`
   }
 `
 
-const Aligner = styled.span`
+const Aligner = styled.span `
   display: flex;
   align-items: center;
   justify-content: space-between;
 `
 
-const InputPanel = styled.div<{ hideInput?: boolean }>`
+const InputPanel = styled.div < { hideInput ? : boolean } > `
   display: flex;
   width: 100%;
   margin-top: 24px;
@@ -88,64 +88,69 @@ const InputPanel = styled.div<{ hideInput?: boolean }>`
 `
 
 const MintRedeemTransactionsModal = ({
-  onDismiss = defaultOnDismiss,
-  isRedeem,
-  currency,
-  totalAvailable = '0',
-  showMaxButton,
-  currencyMaxAmount,
-  disabledConformButton,
+    onDismiss = defaultOnDismiss,
+    isRedeem,
+    currency,
+    totalAvailable = '0',
+    showMaxButton,
+    currencyMaxAmount,
+    disabledConformButton,
 }: MintRedeemTransactionsModalProps) => {
-  const [ valueInput, setValueInput ] = useState('')
-  const { account } = useActiveWeb3React()
-  const { deposit, loading } = useMint()
-  const { withdraw, loadingStatus } = useRedeem()
-  const [ xvonFeeDisplay, setXvonFeeDisplay] = useState(0)
-  const { xvonBalances, vdpTotalSupply } = useRedeemFeeCalculate()
-  const [ xvonOfVdpMasterBalance, setXvonOfVdpMasterBalance ] = useState(0)
-  const [ vdpTotalSupplyAmount , setVdpTotalSupplyAmount] = useState(0)
-  const web3 = useWeb3()
+    const [valueInput, setValueInput] = useState('')
+    const { account } = useActiveWeb3React()
+    const { deposit, loading } = useMint()
+    const { withdraw, loadingStatus } = useRedeem()
+    const [xvonFeeDisplay, setXvonFeeDisplay] = useState(0)
+    // const [getAmount,setGetAmount] = useState(0)
+    const { xvonBalances, vdpTotalSupply } = useRedeemFeeCalculate()
+    const [xvonOfVdpMasterBalance, setXvonOfVdpMasterBalance] = useState(0)
+    const [vdpTotalSupplyAmount, setVdpTotalSupplyAmount] = useState(0)
+    const web3 = useWeb3()
 
-  const hideInput = false
-  let haveBalance = false
-  let haveInput = false
+    const hideInput = false
+    let haveBalance = false
+    let haveInput = false
 
-  const handleTypeInput = useCallback((value: string) => {
-    setValueInput(value)
-  }, [])
+    const handleTypeInput = useCallback((value: string) => {
+        setValueInput(value)
+    }, [])
 
-  const maxAmountInput: CurrencyAmount | undefined = maxAmountSpend(currencyMaxAmount)
+    const maxAmountInput: CurrencyAmount | undefined = maxAmountSpend(currencyMaxAmount)
 
-  const handleMaxInput = useCallback(() => {
-    if (maxAmountInput) {
-      +maxAmountInput.toExact() >= 1000 ? setValueInput('1000') : setValueInput(maxAmountInput.toExact())
-    }
-  }, [maxAmountInput])
+    const handleMaxInput = useCallback(() => {
+        if (maxAmountInput) {
+            +maxAmountInput.toExact() >= 1000 ? setValueInput('1000') : setValueInput(maxAmountInput.toExact())
+        }
+    }, [maxAmountInput])
 
-  if (currencyMaxAmount) {
-    // if not token's holder cant use button
-    haveBalance = +currencyMaxAmount.toSignificant(18) !== 0
-  }
-
-  if (+valueInput > 0) {
-    // if value of input < max amount can't use button
     if (currencyMaxAmount) {
-      haveInput = +valueInput <= +currencyMaxAmount.toSignificant(18)
+        // if not token's holder cant use button
+        haveBalance = +currencyMaxAmount.toSignificant(18) !== 0
     }
-  }
 
-  useEffect(() => {
-    if(!isRedeem) {
-      setXvonFeeDisplay(+valueInput * 0.1)
-    }else {
-      xvonBalances.then((res) => setXvonOfVdpMasterBalance(+web3.utils.fromWei(res.toString())))
-      vdpTotalSupply.then((res) => setVdpTotalSupplyAmount(+web3.utils.fromWei(res.toString())))
-      setXvonFeeDisplay((+valueInput * xvonOfVdpMasterBalance) / vdpTotalSupplyAmount)
+    if (+valueInput > 0) {
+        // if value of input < max amount can't use button
+        if (currencyMaxAmount) {
+            haveInput = +valueInput <= +currencyMaxAmount.toSignificant(18)
+        }
     }
-  }, [isRedeem, valueInput, vdpTotalSupply, vdpTotalSupplyAmount, web3.utils, xvonBalances, xvonOfVdpMasterBalance])
 
-  return (
-    <Modal title={!isRedeem ? 'MINT VDP' : 'REDEEM BUSD'} onDismiss={onDismiss}>
+    const getAmount = 0
+
+    useEffect(() => {
+        // getAmount = valueInput - xvonFeeDisplay
+        // setGetAmount(getAmount);
+        if (!isRedeem) {
+            setXvonFeeDisplay(+valueInput * 0.0025)
+        } else {
+            xvonBalances.then((res) => setXvonOfVdpMasterBalance(+web3.utils.fromWei(res.toString())))
+            vdpTotalSupply.then((res) => setVdpTotalSupplyAmount(+web3.utils.fromWei(res.toString())))
+            setXvonFeeDisplay(+valueInput * 0.0025)
+        }
+    }, [isRedeem, valueInput, vdpTotalSupply, vdpTotalSupplyAmount, web3.utils, xvonBalances, xvonOfVdpMasterBalance])
+
+    return (
+        <Modal title={!isRedeem ? 'MINT ROY' : 'REDEEM BUSD'} onDismiss={onDismiss}>
       <Flex justifyContent="center" flexDirection="column" alignItems="center">
         <Details>
           <Text
@@ -157,7 +162,7 @@ const MintRedeemTransactionsModal = ({
               fontWeight: 'bold',
             }}
           >
-            {totalAvailable} {!isRedeem ? 'BUSD' : 'VDP'} Available
+            {totalAvailable} {!isRedeem ? 'BUSD' : 'ROY'} Available
           </Text>
         </Details>
         <InputPanel>
@@ -199,9 +204,20 @@ const MintRedeemTransactionsModal = ({
             }}
           >
             {!isRedeem
-              ? `Use ${xvonFeeDisplay} xVON as a fee.`
-              : `Use ${xvonFeeDisplay.toFixed(3)} xVON as a fee(vary according to the amount of total supply)`}
+              ? `Use ${xvonFeeDisplay.toFixed(3)} BUSD as a fee.`
+              : `Use ${xvonFeeDisplay.toFixed(3)} BUSD as a fee`}
           </Text>
+{/*          <Text
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              justifyContent: 'flex-end',
+              fontSize: '12px',
+              marginBottom: '24px',
+            }}
+          >
+            You will get {getAmount} ROY.
+          </Text> */}
         </Details>
 
         <Row style={{ marginTop: '16px' }}>
@@ -228,7 +244,7 @@ const MintRedeemTransactionsModal = ({
             Confirm
           </Button>
         </Row>
-        <FooterContent>
+      {/*  <FooterContent>
           <Text style={{ fontWeight: 'bold' }}>WARNING:</Text>
           <Text style={{ fontSize: '14px', fontWeight: 'bold', color: '#D70026' }}>
             Maximum mint/redeem is 1,000 BUSD or VDP per a round
@@ -237,10 +253,10 @@ const MintRedeemTransactionsModal = ({
             VDP are used to back BUSD. If all BUSD are used up, it is not possible to sell it until new income refills
             the bank.
           </Text>
-        </FooterContent>
+        </FooterContent> */}
       </Flex>
     </Modal>
-  )
+    )
 }
 
 export default MintRedeemTransactionsModal

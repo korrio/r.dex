@@ -24,7 +24,7 @@ export const useRedeem = () => {
       // Send a transaction to blockchain
       try {
         masterContract
-          .redeem(amountInWei)
+          .claimBUSD(amountInWei)
           .send(options)
           .on('confirmation', (confirmationNumber: any, receipt: any) => {
             console.log('confirmationNumber', confirmationNumber)

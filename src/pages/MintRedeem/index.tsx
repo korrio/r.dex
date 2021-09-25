@@ -31,32 +31,24 @@ const MintRedeem = () => {
   const busdCurrencyBalance = useCurrencyBalance(account ?? undefined, busdCurrency ?? undefined)
   const vdpCurrencyBalance = useCurrencyBalance(account ?? undefined, vdpCurrency ?? undefined) 
   const busdRedeemableBalance = useCurrencyBalance(getRoyMasterAddress() ?? undefined, busdCurrency ?? undefined) 
-  const useXvonAllowanceBignumber = useXvonAllowance(account ?? undefined)
+  const useXvonAllowanceBignumber = useXvonAllowance()
   const [isXvonApproved, setIsXvonApproved] = useState(false)
   const [xvonAllowance, setXvonAllowance] = useState('0')
-  const { onApproveXvon } = useApproveXvon(account ?? undefined)
+  const { onApproveXvon } = useApproveXvon()
   const [requestedXvonApproval, setRequestedXvonApproval] = useState(false)
 
   useEffect(() => {
-    // set result of promise to token allowance
-    useXvonAllowanceBignumber.then((allowance) => setXvonAllowance(allowance.toString()))
 
-    if (account) {
-      // check each token allowance (that approved)
+    if (account && useXvonAllowanceBignumber) {
+      useXvonAllowanceBignumber.then((allowance) => setXvonAllowance(allowance.toString()))
       setIsXvonApproved(+xvonAllowance.toString() > 0)
     } else {
       setIsXvonApproved(false)
     }
-  }, [
-    account,
-    xvonAllowance,
-    isXvonApproved,
-    useXvonAllowanceBignumber,
-    requestedXvonApproval,
-  ])
+  }, [account, xvonAllowance, isXvonApproved, requestedXvonApproval, useXvonAllowanceBignumber])
 
     
-  const handleApproveXvon = useCallback(async () => {
+  const handleApproveXvon = async () => {
     try {
       setRequestedXvonApproval(true)
       await onApproveXvon()
@@ -64,17 +56,17 @@ const MintRedeem = () => {
     } catch (e) {
       console.error(e)
     }
-  }, [onApproveXvon])
+  }
 
   return (
     <>
       <CardNav activeIndex={2} />
-      <Text style={{ maxWidth: '500px', padding: '0 24px 24px 24px', lineHeight: '1.5rem' }}>
+{/*      <Text style={{ maxWidth: '500px', padding: '0 24px 24px 24px', lineHeight: '1.5rem' }}>
         Purchase ROY to earn profit share
-      </Text>
+      </Text> */}
       <AppBody>
         <Wrapper id="mintredeem-page">
-          <PageHeader title="ROYAL TOKEN" isMintPage />
+          <PageHeader title="ROYAL BANK" description='Mint or Redeem ROY tokens with BUSD as 1:1 ratio' isMintPage />
           <CardBody>
             {account && (
               <SubCard
@@ -103,13 +95,13 @@ const MintRedeem = () => {
             {account && !isXvonApproved && (
               <>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '16px' }}>
-                  <Text style={{ fontSize: '14px', marginTop: '8px' }}>xVON approving use as a fee</Text>
+                  <Text style={{ fontSize: '14px', marginTop: '8px' }}>ROYX approving use as a fee</Text>
                   <Button
                     onClick={handleApproveXvon}
                     style={{ width: '85%', marginTop: '8px' }}
                     disabled={requestedXvonApproval || isXvonApproved}
                   >
-                    approve BUSD
+                    Approve ROYX
                   </Button>
                 </div>
               </>
@@ -125,12 +117,15 @@ const MintRedeem = () => {
       </AppBody>
       {/* <AdvancedSwapDetailsDropdown trade={trade} /> */}
       <FooterContent>
-        <Text style={{ fontWeight: 'bold' }}>WARNING:</Text>
-        <Text style={{ fontSize: '14px', fontWeight: 'bold', color: '#D70026' }}>
-          Maximum mint/redeem is 1,000 BUSD or ROY per a round
+        <Text style={{ fontWeight: 'bold' }}>Disclaimer:</Text>
+        <Text style={{ fontSize: '14px', fontWeight: 'bold' }}>
+          - Maximum mint is 3,000 BUSD per a round
+        </Text>
+        <Text style={{ fontSize: '14px', fontWeight: 'bold' }}>
+          - Maximum redeem is 1,000 ROY per a round
         </Text>
         <Text style={{ fontSize: '14px' }}>
-          ROY are used to back BUSD. If all BUSD are used up, it is not possible to sell it until new income refills the
+          - BUSD are used to back ROY. If all BUSD are used up, it is not possible to sell it until new income refills the
           bank.
         </Text>
       </FooterContent>

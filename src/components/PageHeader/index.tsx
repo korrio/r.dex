@@ -40,7 +40,7 @@ const PageHeader = ({ title, description, children, isMintPage }: PageHeaderProp
       <Flex alignItems="center">
         <Details>
           <Heading mb="8px" style={{ display: 'flex', fontSize: !isMintPage ? '20px' : '24px' }}>
-            {isMintPage && <img style={{ marginRight: '8px' }} src="/vdp-logo.png" alt="vdp logo" width="28" />}
+            {isMintPage && <img style={{ marginRight: '8px' }} src="https://royalcats.finance/royal.png" alt="royal logo" width="28" />}
             {title}
           </Heading>
           {description && (

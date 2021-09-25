@@ -20,7 +20,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
           {TranslateString(262, 'Liquidity')}
         </ButtonMenuItem>
         <ButtonMenuItem id="mint-nav-link" to="/mintredeem" as={Link}>
-          Mint-Redeem
+          ROYAL Bank
         </ButtonMenuItem>
 {/*        <ButtonMenuItem
           id="pool-nav-link"

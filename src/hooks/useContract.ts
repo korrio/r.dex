@@ -101,19 +101,34 @@ export function useVDPMasterContract(withSignerIfPossible?: boolean): Contract |
 }
 
 export function useBusdContract(withSignerIfPossible?: boolean): Contract | null {
+  
+  console.log("====1");
   const busdAddress = contractsAddress.busd[CHAING_ID]
+  console.log("busdAddress",busdAddress);
+  console.log("====1");
+
   const busdAbi = (BUSD_ABI as unknown) as AbiItem
   return useContract(busdAddress, busdAbi, withSignerIfPossible)
 }
 
 export function useXvonContract(withSignerIfPossible?: boolean): Contract | null {
-  const xvonAddress = contractsAddress.busd[CHAING_ID]
+  
+  console.log("====2");
+  const xvonAddress = contractsAddress.xvon[CHAING_ID]
+  console.log("xvonAddress",xvonAddress);
+  console.log("====2");
+
   const xvonAbi = (XVON_ABI as unknown) as AbiItem
   return useContract(xvonAddress, xvonAbi, withSignerIfPossible)
 }
 
 export function useVdpContract(withSignerIfPossible?: boolean): Contract | null {
+
+  console.log("====3");
   const vdpAddress = contractsAddress.roy[CHAING_ID]
+  console.log("vdpAddress",vdpAddress);
+  console.log("====3");
+
   const vdpAbi = (VDP_ABI as unknown) as AbiItem
   return useContract(vdpAddress, vdpAbi, withSignerIfPossible)
 }
